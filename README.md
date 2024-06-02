@@ -12,26 +12,32 @@ Please cite:
 ```
 
 ## Requirements
-python3.11
+- python3.11
+
 ```bash
 python3.11 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 ```
-scikit-learn              0.22.1  
-transformers              2.3.0  
-pytorch                   1.5.0 (Cuda 9.2)
-numpy                     1.18.1  
-pandas                    0.25.3  
-matplotlib                3.1.3
-scipy                     1.4.1  
+---
+| Package          | Version          |
+|------------------|------------------|
+| scikit-learn     | 0.22.1           |
+| transformers     |      2.3.0       | 
+| pytorch          | 1.5.0 (Cuda 9.2) | 
+| numpy            | 1.18.1           | 
+| pandas           | 0.25.3           | 
+| matplotlib       | 3.1.3            | 
+| scipy            | 1.4.1            |  
 
 ## Training a model
 Run
-```angular2html
+
+```bash
 cd src/
 ./train.sh <config_name> <num_warmup_epochs> <optimization_key>
 ```
+
 For example:
 ```angular2html
 cd src/
