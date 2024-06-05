@@ -1,17 +1,18 @@
 import numpy as np
-import torch, os, sys, argparse
-sys.path.append('./modeling')
-import models as bm
-import data_utils, model_utils, datasets
-import input_models as im
-import torch.nn as nn
-import torch.optim as optim
+import torch
+
+from main import get_parser, torch_settings, config_settings, load_vectors
+from modeling import models as bm
+from modeling import data_utils, model_utils, datasets
+from modeling import input_models as im
+from torch import nn, optim
 import pandas as pd
 
 VECTOR_NAME = 'glove.6B.100d'
 SEED = 0
 NUM_GPUS = None
 use_cuda = torch.cuda.is_available()
+
 
 def eval(model_handler, dev_data, class_wise=False, is_test=False, correct_preds=False):
     '''
@@ -61,33 +62,10 @@ def predict_helper(pred_lst, pred_data):
 
 
 if __name__ == '__main__':
-    '''
-    first arg: config file name
-    second arg: data file name
-    '''
-    parser = argparse.ArgumentParser()
-    parser.add_argument('-s', '--config_file', help='Name of the cofig data file', required=False)
-    parser.add_argument('-i', '--trn_data', help='Name of the training data file', required=False)
-    parser.add_argument('-d', '--dev_data', help='Name of the dev data file', default=None, required=False)
-    parser.add_argument('-k', '--ckp_name', help='Checkpoint name', required=False)
-    parser.add_argument('-m', '--mode', help='What to do', required=True)
-    parser.add_argument('-n', '--name', help='something to add to the saved model name',
-                        required=False, default='')
-    parser.add_argument('-o', '--out', help='Ouput file name', default='')
-    parser.add_argument('-v', '--score_key', help='What optimized for', required=False, default='f_macro')
+    parser = get_parser(mode='eval')
     args = vars(parser.parse_args())
-
-    torch.manual_seed(SEED)
-    torch.cuda.manual_seed_all(SEED)
-    torch.backends.cudnn.deterministic = True
-
-    ####################
-    # load config file #
-    ####################
-    with open(args['config_file'], 'r') as f:
-        config = dict()
-        for l in f.readlines():
-            config[l.strip().split(":")[0]] = l.strip().split(":")[1]
+    torch_settings(seed=SEED)
+    config = config_settings(args=args)
 
     trn_data_kwargs = {}
     dev_data_kwargs = {}
@@ -104,31 +82,20 @@ if __name__ == '__main__':
         else:
             dev_s = 'dev'
         dev_data_kwargs['topic_rep_dict'] = '{}/{}-{}.labels.pkl'.format(config['topic_path'],
-                                                                          config['topic_name'],
+                                                                         config['topic_name'],
                                                                          dev_s)
 
-    #############
-    # LOAD DATA #
-    #############
-    # load training data
-
+    vector_name = config.get('vec_name', '')
+    vectors = load_vectors(vector_name=vector_name, vector_dim=vector_dim)
     if 'bert' not in config and 'bert' not in config['name']:
-        ################
-        # load vectors #
-        ################
-
-
-        vec_name = config['vec_name']
-        vec_dim = int(config['vec_dim'])
-
-        vecs = data_utils.load_vectors('../resources/{}.vectors.npy'.format(vec_name),
-                                       dim=vec_dim, seed=SEED)
-        vocab_name = '../resources/{}.vocab.pkl'.format(vec_name)
-        data = datasets.StanceData(args['trn_data'], vocab_name, pad_val=len(vecs) - 1,
-                                   max_tok_len=int(config.get('max_tok_len', '200')),
-                                   max_sen_len=int(config.get('max_sen_len', '10')),
-                                   keep_sen=('keep_sen' in config),
-                                   **trn_data_kwargs)
+        vocab_name = '../resources/{}.vocab.pkl'.format(vector_name)
+        data = datasets.StanceData(
+            args['trn_data'], vocab_name, pad_val=len(vectors) - 1,
+            max_tok_len=int(config.get('max_tok_len', '200')),
+            max_sen_len=int(config.get('max_sen_len', '10')),
+            keep_sen=('keep_sen' in config),
+            **trn_data_kwargs
+        )
     else:
         data = datasets.StanceData(args['trn_data'], None, max_tok_len=config['max_tok_len'],
                                    max_top_len=config['max_top_len'], is_bert=True,
@@ -164,13 +131,13 @@ if __name__ == '__main__':
         loss_fn = nn.CrossEntropyLoss()
 
         model = bm.TGANet(in_dropout_prob=float(config['in_dropout']),
-                                 hidden_size=int(config['hidden_size']),
-                                 text_dim=int(config['text_dim']),
-                                 add_topic=(config.get('add_resid', '0') == '1'),
-                                 att_mode=config.get('att_mode', 'text_only'),
-                                 topic_dim=int(config['topic_dim']),
-                                 learned=(config.get('learned', '0') == '1'),
-                                 use_cuda=use_cuda)
+                          hidden_size=int(config['hidden_size']),
+                          text_dim=int(config['text_dim']),
+                          add_topic=(config.get('add_resid', '0') == '1'),
+                          att_mode=config.get('att_mode', 'text_only'),
+                          topic_dim=int(config['topic_dim']),
+                          learned=(config.get('learned', '0') == '1'),
+                          use_cuda=use_cuda)
 
         optimizer = optim.Adam(model.parameters())
 
@@ -202,7 +169,7 @@ if __name__ == '__main__':
             batch_args = {'keep_sen': False}
             input_layer = im.BERTLayer(mode='text-level', use_cuda=use_cuda)
 
-        setup_fn =data_utils.setup_helper_bert_ffnn
+        setup_fn = data_utils.setup_helper_bert_ffnn
 
         loss_fn = nn.CrossEntropyLoss()
         model = bm.FFNN(input_dim=input_layer.dim, in_dropout_prob=float(config['in_dropout']),
@@ -316,8 +283,6 @@ if __name__ == '__main__':
                                                       result_path=config.get('res_path', 'data/gen-stance/'),
                                                       use_score=args['score_key'],
                                                       **kwargs)
-
-
 
     cname = '{}ckp-[NAME]-{}.tar'.format(config.get('ckp_path', 'data/checkpoints/'), args['ckp_name'])
     model_handler.load(filename=cname)

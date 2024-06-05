@@ -33,7 +33,6 @@ def select_hyperparams(config, output_name, remove_checkpoints=False, score_key=
             constraints_OK = check_constraints(config, p2v)
         tn2vals[trial_num] = p2v
 
-
         ### construct the appropriate config file
         config_file_name = config_path + 'config-{}.txt'.format(trial_num)
         print("[trial {}] writing configuration to {}".format(trial_num, config_file_name))
@@ -41,9 +40,9 @@ def select_hyperparams(config, output_name, remove_checkpoints=False, score_key=
         print("[trial {}] results to {}".format(trial_num, result_path))
         f = open(config_file_name, 'w')
         model_name = '{}_t{}'.format(config['name'], trial_num)
-        f.write('name:{}\n'.format(model_name)) # include trial number in name
-        f.write('ckp_path:{}\n'.format(checkpoint_path)) # checkpoint save location
-        f.write('res_path:{}\n'.format(result_path)) # results save location
+        f.write('name:{}\n'.format(model_name))  # include trial number in name
+        f.write('ckp_path:{}\n'.format(checkpoint_path))  # checkpoint save location
+        f.write('res_path:{}\n'.format(result_path))  # results save location
         for p in model_params:
             if p == 'name': continue
             f.write('{}:{}\n'.format(p, config[p]))
@@ -71,7 +70,7 @@ def select_hyperparams(config, output_name, remove_checkpoints=False, score_key=
 
         if remove_checkpoints:
             checkpoint_path = '../checkpoints/{}-{}trials/'.format(config['dir_name'],
-                                                                     config['num_search_trials'])
+                                                                   config['num_search_trials'])
             for fname in os.listdir(checkpoint_path):
                 os.remove(os.path.join(checkpoint_path, fname))
             print("[trial {}] removing checkpoints from {}".format(trial_num, checkpoint_path))
@@ -84,7 +83,7 @@ def select_hyperparams(config, output_name, remove_checkpoints=False, score_key=
         data.append([ti, score_lst[ti], time_lst[ti], json.dumps(tn2vals[ti])])
     df = pd.DataFrame(data, columns=['trial_num', 'avg_score', 'time', 'param_vals'])
     df.to_csv('../data/{}-{}trials/{}'.format(config['dir_name'], config['num_search_trials'],
-                                                      output_name), index=False)
+                                              output_name), index=False)
     print("results to {}".format(output_name))
 
 
@@ -99,9 +98,9 @@ def parse_config(fname):
     n2info['tune_params'] = n2info['tune_params'].split(',')
     for p in n2info['tune_params']:
         t = n2info['{}_type'.format(p)]
-        n2info['{}_range'.format(p)] = list(map(lambda x: int(x) if t == 'int' else
-                                                    float(x) if t == 'float' else x,
-                                                    n2info['{}_range'.format(p)].split('-')))
+        n2info['{}_range'.format(p)] = list(
+            map(lambda x: int(x) if t == 'int' else float(x) if t == 'float' else x,
+                n2info['{}_range'.format(p)].split('-')))
     return n2info
 
 
@@ -127,8 +126,9 @@ def sample_values():
 def check_constraints(n2info, p2v):
     constraints_OK = True
     for n in n2info:
-        if not n.startswith('CON'): continue
-        eq = n2info[n].split('.') # equations should be in format param1.symbol.param2
+        if not n.startswith('CON'):
+            continue
+        eq = n2info[n].split('.')  # equations should be in format param1.symbol.param2
         i = 0
         vlst = [None, None]
         vidx = 0
@@ -152,7 +152,7 @@ def check_constraints(n2info, p2v):
                     if prev_s == '+':
 
                         vlst[vidx] = vlst[vidx] + v
-                    else: # prev_s == '*':
+                    else:  # prev_s == '*':
                         vlst[vidx] = vlst[vidx] * v
                     prev_s = None
                 elif v is not None:
@@ -165,12 +165,18 @@ def check_constraints(n2info, p2v):
 
 
 def parse_equation(v1, s, v2):
-    if s == '<': return v1 < v2
-    elif s == '<=': return v1 <= v2
-    elif s == '=': return v1 == v2
-    elif s == '!=': return v1 != v2
-    elif s == '>': return v2 > v2
-    elif s == '>=': return v1 >= v2
+    if s == '<':
+        return v1 < v2
+    elif s == '<=':
+        return v1 <= v2
+    elif s == '=':
+        return v1 == v2
+    elif s == '!=':
+        return v1 != v2
+    elif s == '>':
+        return v2 > v2
+    elif s == '>=':
+        return v1 >= v2
     else:
         print("ERROR: symbol {} not recognized".format(s))
         sys.exit(1)
@@ -178,11 +184,11 @@ def parse_equation(v1, s, v2):
 
 def make_dirs(config):
     config_path = '../config/{}-{}trials/'.format(config['dir_name'],
-                                                    config['num_search_trials'])
+                                                  config['num_search_trials'])
     checkpoint_path = '../checkpoints/{}-{}trials/'.format(config['dir_name'],
-                                                             config['num_search_trials'])
+                                                           config['num_search_trials'])
     result_path = '../data/{}-{}trials/'.format(config['dir_name'],
-                                             config['num_search_trials'])
+                                                config['num_search_trials'])
     for p_name, p_path in [('config_path', config_path), ('ckp_path', checkpoint_path),
                            ('result_path', result_path)]:
         if not os.path.exists(p_path):
@@ -195,11 +201,11 @@ def make_dirs(config):
 
 def remove_dirs(config):
     config_path = '../config/{}-{}trials/'.format(config['dir_name'],
-                                                    config['num_search_trials'])
+                                                  config['num_search_trials'])
     checkpoint_path = '../checkpoints/{}-{}trials/'.format(config['dir_name'],
-                                                             config['num_search_trials'])
+                                                           config['num_search_trials'])
     result_path = '../data/{}-{}trials/'.format(config['dir_name'],
-                                             config['num_search_trials'])
+                                                config['num_search_trials'])
     for p_name, p_path in [('config_path', config_path), ('ckp_path', checkpoint_path),
                            ('result_path', result_path)]:
         if not os.path.exists(p_path):
