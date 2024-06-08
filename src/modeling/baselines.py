@@ -1,4 +1,5 @@
-import sys, os, time, argparse
+from datetime import datetime
+import sys, argparse
 sys.path.append('..')
 import data_utils, model_utils, datasets
 from sklearn.linear_model import LogisticRegression
@@ -50,10 +51,10 @@ def baseline_BoWV(model_type, trn_name, dev_name):
                                              dataloader=trn_datasampler)
 
     print("Training model")
-    st = time.time()
+    st = datetime.now()
     model_handler.train_step()
-    et = time.time()
-    print("   took: {:.1f} minutes".format((et - st) / 60.))
+    et = datetime.now()
+    print(f"\ttook: {(et - st) / 60:.1f} minutes (Finished at {et.strftime('%Y%m%d - %H:%M:%S')})")
 
     print("Evaluating model on train data")
     eval_helper(model_handler, trn_datasampler, model_type, is_train=True)
@@ -62,7 +63,7 @@ def baseline_BoWV(model_type, trn_name, dev_name):
     eval_helper(model_handler, dev_datasampler, model_type)
 
     print("Saving model")
-    model_handler.save('../../checkpoints/')
+    model_handler.save('checkpoints/')
 
 
 def eval_only(model_type, trn_name, dev_name):

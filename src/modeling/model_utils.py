@@ -1,7 +1,12 @@
-import torch, data_utils, pickle, time, json, copy
+import torch
+from torch import nn
+import pickle
+from datetime import datetime
+import json
+import copy
+# from modeling import data_utils
 from sklearn.metrics import f1_score, precision_score, recall_score
 import numpy as np
-import torch.nn as nn
 
 
 class ModelHandler:
@@ -10,6 +15,7 @@ class ModelHandler:
     save it, load it, and evaluate it. The model used here is assumed to be an
     sklearn model. Use TorchModelHandler for a model written in pytorch.
     '''
+
     def __init__(self, model, dataloader, name):
         self.model = model
         self.dataloader = dataloader
@@ -46,7 +52,6 @@ class ModelHandler:
         input_labels = np.array(labels)
 
         return input_data, input_labels, id_lst
-
 
     def train_step(self):
         print("   preparing data")
@@ -100,6 +105,7 @@ class TorchModelHandler:
     save it, load it, and evaluate it. The model used here is assumed to be
     written in pytorch.
     '''
+
     def __init__(self, num_ckps=10, use_score='f_macro', use_cuda=False, use_last_batch=True,
                  num_gpus=None, checkpoint_path='data/checkpoints/',
                  result_path='data/', **params):
@@ -111,9 +117,8 @@ class TorchModelHandler:
         self.batching_fn = params['batching_fn']
         self.batching_kwargs = params['batching_kwargs']
         self.setup_fn = params['setup_fn']
-        self.fine_tune=params.get('fine_tune', False)
-        self.save_checkpoints=params.get('save_ckp', False)
-
+        self.fine_tune = params.get('fine_tune', False)
+        self.save_checkpoints = params.get('save_ckp', False)
 
         self.num_labels = self.model.num_labels
         self.labels = params.get('labels', None)
@@ -142,13 +147,13 @@ class TorchModelHandler:
         self.use_cuda = use_cuda
 
         if self.use_cuda:
-            self.device = 'cuda' if params.get('device') is None else 'cuda:'+ params['device']
+            self.device = 'cuda' if params.get('device') is None else 'cuda:' + params['device']
             # move model and loss function to GPU, NOT the embedder
             self.model = self.model.to(self.device)
             self.loss_function = self.loss_function.to(self.device)
 
         if num_gpus is not None:
-            self.model = nn.DataParallel(self.model, device_ids=[0,1])
+            self.model = nn.DataParallel(self.model, device_ids=[0, 1])
 
     def save_best(self, data=None, scores=None, data_name=None, class_wise=False):
         '''
@@ -173,24 +178,24 @@ class TorchModelHandler:
         if len(self.max_lst) < 5:
             score_updated = True
             if len(self.max_lst) > 0:
-                prev_max = self.max_lst[-1][0][self.score_key] # last thing in the list
+                prev_max = self.max_lst[-1][0][self.score_key]  # last thing in the list
             else:
                 prev_max = curr_score
             self.max_lst.append((scores, self.epoch - 1))
-        elif curr_score > self.max_lst[0][0][self.score_key]: # if bigger than the smallest score
+        elif curr_score > self.max_lst[0][0][self.score_key]:  # if bigger than the smallest score
             score_updated = True
-            prev_max = self.max_lst[-1][0][self.score_key] # last thing in the list
-            self.max_lst[0] = (scores, self.epoch - 1) #  replace smallest score
+            prev_max = self.max_lst[-1][0][self.score_key]  # last thing in the list
+            self.max_lst[0] = (scores, self.epoch - 1)  # replace smallest score
 
         # update best saved model and file with top scores
         if score_updated:
             # sort the scores
-            self.max_lst = sorted(self.max_lst, key=lambda p: p[0][self.score_key]) # lowest first
+            self.max_lst = sorted(self.max_lst, key=lambda p: p[0][self.score_key])  # lowest first
             # write top 5 scores
-            f = open('{}{}.top5_{}.txt'.format(self.result_path, self.name, self.score_key), 'w') # overrides
+            f = open('{}{}.top5_{}.txt'.format(self.result_path, self.name, self.score_key), 'w')  # overrides
             for p in self.max_lst:
                 f.write('Epoch: {}\nScore: {}\nAll Scores: {}\n'.format(p[1], p[0][self.score_key],
-                                                                      json.dumps(p[0])))
+                                                                        json.dumps(p[0])))
             # save best model step, if its this one
             print(curr_score, prev_max)
             if curr_score > prev_max:
@@ -205,7 +210,8 @@ class TorchModelHandler:
         '''
         if num is None:
             check_num = self.checkpoint_num
-        else: check_num = num
+        else:
+            check_num = num
 
         torch.save({
             'epoch': self.epoch,
@@ -224,7 +230,8 @@ class TorchModelHandler:
         if num is None:
             self.checkpoint_num = (self.checkpoint_num + 1) % self.num_ckps
 
-    def load(self, filename='data/checkpoints/ckp-[NAME]-FINAL.tar', use_cpu=False):#filename='data/checkpoints/ckp-[NAME]-FINAL.tar'):
+    def load(self, filename='data/checkpoints/ckp-[NAME]-FINAL.tar',
+             use_cpu=False):  # filename='data/checkpoints/ckp-[NAME]-FINAL.tar'):
         '''
         Loads a saved pytorch model from a checkpoint file.
         :param filename: the name of the file to load from. By default uses
@@ -241,7 +248,7 @@ class TorchModelHandler:
         print("[{}] epoch {}".format(self.name, self.epoch))
         self.model.train()
         self.loss = 0.
-        start_time = time.time()
+        start_time = datetime.now()
         for i_batch, sample_batched in enumerate(self.dataloader):
             self.model.zero_grad()
 
@@ -259,8 +266,8 @@ class TorchModelHandler:
 
             self.optimizer.step()
 
-        end_time = time.time()
-        print("   took: {:.1f} min".format((end_time - start_time)/60.))
+        end_time = datetime.now()
+        print(f"\ttook: {(end_time - start_time) / 60:.1f} min (Finished at {end_time})")
         self.epoch += 1
 
     def compute_scores(self, score_fn, true_labels, pred_labels, class_wise, name):

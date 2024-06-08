@@ -1,7 +1,8 @@
 import numpy as np
 import torch
 
-from main import get_parser, torch_settings, config_settings, load_vectors
+from main import torch_settings, config_settings, load_vectors
+from main_arg_parser import get_parser
 from modeling import models as bm
 from modeling import data_utils, model_utils, datasets
 from modeling import input_models as im
