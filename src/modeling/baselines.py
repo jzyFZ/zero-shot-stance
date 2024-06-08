@@ -54,7 +54,7 @@ def baseline_BoWV(model_type, trn_name, dev_name):
     st = datetime.now()
     model_handler.train_step()
     et = datetime.now()
-    print(f"\ttook: {(et - st) / 60:.1f} minutes (Finished at {et.strftime('%Y%m%d - %H:%M:%S')})")
+    print(f"\ttook: {(et - st).seconds // 60} minutes (Finished at {et.strftime('%Y%m%d - %H:%M:%S')})")
 
     print("Evaluating model on train data")
     eval_helper(model_handler, trn_datasampler, model_type, is_train=True)

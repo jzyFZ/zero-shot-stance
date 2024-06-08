@@ -267,7 +267,7 @@ class TorchModelHandler:
             self.optimizer.step()
 
         end_time = datetime.now()
-        print(f"\ttook: {(end_time - start_time) / 60:.1f} min (Finished at {end_time})")
+        print(f"\ttook: {(end_time - start_time).seconds // 60} min (Finished at {end_time.strftime('%Y%m%d - %H:%M:%S')})")
         self.epoch += 1
 
     def compute_scores(self, score_fn, true_labels, pred_labels, class_wise, name):
