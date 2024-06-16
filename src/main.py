@@ -1,12 +1,18 @@
-import time
+from datetime import datetime
 
 import torch
-from torch import nn, optim
+from torch import nn
 import numpy as np
 
-from main_arg_parser import job_parser, get_parser
-from modeling import models, data_utils, datasets, input_models, model_utils
+from utilities.main_arg_parser import job_parser, get_parser
+from modeling import data_utils, datasets, model_utils
 from train_model import train
+from utilities.preparation.ctsan import prepare_ctsan
+from utilities.preparation.bicond import prepare_bicond
+from utilities.preparation.ffnn_bert import prepare_ffnn_bert
+from utilities.preparation.tganet import prepare_tganet
+from utilities.preparation.rep_ffnn import prepare_repffnn
+from utilities.runtime import print_runtime, print_debug_message
 
 SEED = 0
 NUM_GPUS = None
@@ -31,142 +37,61 @@ def load_vectors(vector_name, vector_dim, seed=0):
     return data_utils.load_vectors('resources/{}.vectors.npy'.format(vector_name), dim=vector_dim, seed=seed)
 
 
-def run(args, mode, config, vectors, use_cuda, data, dev_dataloader):
-    lr = float(config.get('lr', '0.001'))  # set the optimizer
-
-    kwargs, batch_args, name = dict(), dict(), mode  # config['name']
+def run(args, mode, config, vectors, use_cuda, data, dev_dataloader, nn_framework):
+    kwargs, batch_args = dict(), dict()
+    print_debug_message(f"{__name__}: Running in {mode} mode.")
     if 'BiCond' in mode:
-        name += args['name']
-        input_layer = input_models.BasicWordEmbedLayer(
-            vecs=vectors,
-            use_cuda=use_cuda,
-            static_embeds=(config.get('tune_embeds', '0') == '0')
-        )
+        prepared_model = prepare_bicond(mode=mode, vectors=vectors, use_cuda=use_cuda, config=config)
+        name = mode + args['name']
         setup_function = data_utils.setup_helper_bicond
         loss_function = nn.CrossEntropyLoss()
-
-        object_model = models.BiCondLSTMModel(
-            hidden_dim=int(config['h']),
-            embed_dim=input_layer.dim,
-            input_dim=(int(config['in_dim']) if 'in_dim' in config['name'] else input_layer.dim),
-            drop_prob=float(config['dropout']), use_cuda=use_cuda,
-            num_labels=3,
-            keep_sentences=('keep_sen' in config),
-            doc_method=config.get('doc_m', 'maxpool')
-        )
-        optimizer = optim.Adam(object_model.parameters(), lr=lr)
     elif 'CTSAN' in mode:
-        name += args['name']
-        input_layer = input_models.BasicWordEmbedLayer(vecs=vectors, use_cuda=use_cuda)
+        prepared_model = prepare_ctsan(mode=mode, vectors=vectors, use_cuda=use_cuda, config=config)
+        name = mode + args['name']
         setup_function = data_utils.setup_helper_bicond
         loss_function = nn.CrossEntropyLoss()
-
-        object_model = models.CTSAN(
-            hidden_dim=int(config['h']),
-            embed_dim=input_layer.dim,
-            att_dim=int(config['a']),
-            lin_size=int(config['lh']),
-            drop_prob=float(config['dropout']),
-            use_cuda=use_cuda,
-            out_dim=3,
-            keep_sentences=('keep_sen' in config),
-            sentence_version=config.get('sen_v', 'default'),
-            doc_method=config.get('doc_m', 'maxpool'),
-            premade_topic=('topic_name' in config),
-            topic_trans=('topic_name' in config),
-            topic_dim=(int(config.get('topic_dim')) if 'topic_dim' in config else None)
-        )
-        optimizer = optim.Adam(object_model.parameters(), lr=lr)
     elif 'ffnn-bert' in mode:
+        prepared_model = prepare_ffnn_bert(mode=mode, vectors=vectors, use_cuda=use_cuda, config=config)
+        name = mode
         batch_args['keep_sen'] = False
-        if config.get('together_in', '0') == '1':
-            if 'topic_name' in config:
-                input_layer = input_models.JointBERTLayerWithExtra(
-                    vecs=vectors,
-                    use_cuda=use_cuda,
-                    use_both=(config.get('use_ori_topic', '1') == '1'),
-                    static_vecs=(config.get('static_topics', '1') == '1'))
-            else:
-                input_layer = input_models.JointBERTLayer(use_cuda=use_cuda)
-        else:
-            input_layer = input_models.BERTLayer(mode='text-level', use_cuda=use_cuda)
-
-        setup_function = data_utils.setup_helper_bert_ffnn
-
-        loss_function = nn.CrossEntropyLoss()
-        object_model = models.FFNN(
-            input_dim=input_layer.dim,
-            in_dropout_prob=float(config['in_dropout']),
-            hidden_size=int(config['hidden_size']),
-            add_topic=(config.get('add_resid', '1') == '1'),
-            use_cuda=use_cuda,
-            bias=False
-        )
-        optimizer = optim.Adam(object_model.parameters())
-
         kwargs['fine_tune'] = (config.get('fine-tune', 'no') == 'yes')
+        setup_function = data_utils.setup_helper_bert_ffnn
+        loss_function = nn.CrossEntropyLoss()
     elif 'tganet' in mode:
+        prepared_model = prepare_tganet(mode=mode, vectors=vectors, use_cuda=use_cuda, config=config, nn_framework=nn_framework)
+        name = mode
         batch_args['keep_sen'] = False
-        input_layer = input_models.JointBERTLayerWithExtra(
-            vecs=vectors,
-            use_cuda=use_cuda,
-            use_both=(config.get('use_ori_topic', '1') == '1'),
-            static_vecs=(config.get('static_topics', '1') == '1')
-        )
-
         setup_function = data_utils.setup_helper_bert_attffnn
-
         loss_function = nn.CrossEntropyLoss()
-
-        object_model = models.TGANet(
-            in_dropout_prob=float(config['in_dropout']),
-            hidden_size=int(config['hidden_size']),
-            text_dim=int(config['text_dim']),
-            add_topic=(config.get('add_resid', '0') == '1'),
-            att_mode=config.get('att_mode', 'text_only'),
-            topic_dim=int(config['topic_dim']),
-            learned=(config.get('learned', '0') == '1'),
-            use_cuda=use_cuda
-        )
-
-        optimizer = optim.Adam(object_model.parameters())
     elif 'repffnn' in mode:
+        prepared_model = prepare_repffnn(mode=mode, vectors=vectors, use_cuda=use_cuda, config=config)
+        name = mode
         batch_args['keep_sen'] = False
-        input_layer = input_models.JointBERTLayerWithExtra(
-            vecs=vectors,
-            use_cuda=use_cuda,
-            use_both=(config.get('use_ori_topic', '1') == '1'),
-            static_vecs=(config.get('static_topics', '1') == '1')
-        )
-
         setup_function = data_utils.setup_helper_bert_attffnn
-
         loss_function = nn.CrossEntropyLoss()
-
-        object_model = models.RepFFNN(
-            in_dropout_prob=float(config['in_dropout']),
-            hidden_size=int(config['hidden_size']),
-            input_dim=int(config['topic_dim']),
-            use_cuda=use_cuda
-        )
-
-        optimizer = optim.Adam(object_model.parameters())
     else:
         raise NotImplementedError()
 
     kwargs['dataloader'] = data_utils.DataSampler(data, batch_size=int(config['b']))
-    kwargs['model'] = object_model
-    kwargs['embed_model'] = input_layer
+    kwargs['embed_model'] = prepared_model.get('input_layer')
+    kwargs['optimizer'] = prepared_model.get('optimizer')
+    kwargs['model'] = prepared_model.get('object_model')
     kwargs['batching_fn'] = data_utils.prepare_batch
-    kwargs['batching_kwargs'] = batch_args
-    kwargs['name'] = name
     kwargs['loss_function'] = loss_function
-    kwargs['optimizer'] = optimizer
+    kwargs['batching_kwargs'] = batch_args
     kwargs['setup_fn'] = setup_function
+    kwargs['name'] = name
 
-    model_handler = model_utils.TorchModelHandler(
+    if nn_framework == "torch":
+        model_handler_class = model_utils.TorchModelHandler
+    elif nn_framework == "tensorflow":
+        model_handler_class = model_utils.TensorFlowModelHandler
+    else:
+        raise NotImplementedError()
+
+    model_handler = model_handler_class(
         use_cuda=use_cuda,
-        checkpoint_path=config.get('ckp_path', 'data/checkpoints/'),
+        # checkpoint_path=config.get('ckp_path', 'data/checkpoints/'),
         result_path=config.get('res_path', 'data/gen-stance/'),
         use_score=args['score_key'],
         save_ckp=args['save_checkpoints'],
@@ -254,12 +179,13 @@ def prepare_run(config, args, dev_data_path, use_cuda, seed=0):
         use_cuda=use_cuda,
         data=data,
         dev_dataloader=dev_dataloader,
+        nn_framework=args['nn_framework']
     )
 
 
 if __name__ == '__main__':
-    start_time = time.time()
-    print("CUDA Availability:", use_cuda)
+    start_time = datetime.now()
+    print_debug_message(f"{__name__}: CUDA Availability: {use_cuda}")
     main_parser = job_parser()
     kargs, _ = main_parser.parse_known_args()
     job_mode = vars(kargs)['job']
@@ -269,5 +195,5 @@ if __name__ == '__main__':
     cs = config_settings(args=args)
 
     prepare_run(config=cs, args=args, dev_data_path=args['dev_data'], seed=SEED, use_cuda=use_cuda)
-
-    print("[{}] total runtime: {:.2f} minutes".format(cs['name'], (time.time() - start_time) / 60.))
+    end_time = datetime.now()
+    print_runtime(start_time=start_time, end_time=end_time, process_name=cs['name'])

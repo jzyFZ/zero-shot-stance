@@ -1,13 +1,14 @@
 from datetime import datetime
-import sys, argparse
-sys.path.append('..')
-import data_utils, model_utils, datasets
+import argparse
 from sklearn.linear_model import LogisticRegression
 import numpy as np
 import pickle
+from utilities.runtime import print_runtime, print_debug_message
+from modeling import data_utils, model_utils, datasets
 
 REP_PATH = '../../resources/'
-DATA_PATH= '../../data/VAST/'
+DATA_PATH = '../../data/VAST/'
+
 
 def load_setup(model_type, trn_name, dev_name):
     print("Loading data")
@@ -54,15 +55,15 @@ def baseline_BoWV(model_type, trn_name, dev_name):
     st = datetime.now()
     model_handler.train_step()
     et = datetime.now()
-    print(f"\ttook: {(et - st).seconds // 60} minutes (Finished at {et.strftime('%Y%m%d - %H:%M:%S')})")
+    print_debug_message(f"\ttook: {(et - st).seconds // 60} minutes (Finished at {et.strftime('%Y%m%d - %H:%M:%S')})")
 
-    print("Evaluating model on train data")
+    print_debug_message("Evaluating model on train data")
     eval_helper(model_handler, trn_datasampler, model_type, is_train=True)
 
-    print("Evaluating model on dev data")
+    print_debug_message("Evaluating model on dev data")
     eval_helper(model_handler, dev_datasampler, model_type)
 
-    print("Saving model")
+    print_debug_message("Saving model")
     model_handler.save('checkpoints/')
 
 
@@ -72,16 +73,16 @@ def eval_only(model_type, trn_name, dev_name):
                                              dataloader=trn_datasampler)
     if model_type == 'bowv':
         print("Loading model")
-        st = time.time()
+        st = datetime.now()
         model_handler.load('../../checkpoints/')
-        et = time.time()
-        print("   took: {:.1f} minutes".format((et - st) / 60.))
+        et = datetime.now()
+        print_runtime(start_time=st, end_time=et, process_name=eval_only.__name__)
 
     print("Evaluating model on data")
     eval_helper(model_handler, dev_datasampler, model_type)
 
 
-def eval_helper(model_handler,datasampler, model_type, is_train=False):
+def eval_helper(model_handler, datasampler, model_type, is_train=False):
     print("Evaluating model on dev data")
 
     if model_type != 'cmaj':
@@ -115,7 +116,7 @@ class MajorityClusterBaseline():
         dev_cluster_labels = pickle.load(open(REP_PATH + 'topicreps/' + topic_name + '-dev.labels.pkl', 'rb'))
         test_cluster_labels = pickle.load(open(REP_PATH + 'topicreps/' + topic_name + '-test.labels.pkl', 'rb'))
         self.id2cluster_label = dict()
-        for i,cid in self.trn_cluster_labels.items(): self.id2cluster_label[i] = cid
+        for i, cid in self.trn_cluster_labels.items(): self.id2cluster_label[i] = cid
         for i, cid in dev_cluster_labels.items(): self.id2cluster_label[i] = cid
         for i, cid in test_cluster_labels.items(): self.id2cluster_label[i] = cid
 
@@ -163,4 +164,3 @@ if __name__ == '__main__':
 
     else:
         print("ERROR: doing nothing")
-

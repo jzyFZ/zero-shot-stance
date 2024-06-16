@@ -147,7 +147,6 @@ class ScaledDotProductAttention(torch.nn.Module):
     def __init__(self, input_dim, use_cuda=False):
         super(ScaledDotProductAttention, self).__init__()
         self.input_dim = input_dim
-
         self.scale = math.sqrt(2 * self.input_dim)
 
     def forward(self, inputs, query):

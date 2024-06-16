@@ -4,9 +4,12 @@ import pickle
 from datetime import datetime
 import json
 import copy
-# from modeling import data_utils
 from sklearn.metrics import f1_score, precision_score, recall_score
 import numpy as np
+import pandas as pd
+import tensorflow as tf
+
+from utilities.runtime import print_runtime, print_debug_message
 
 
 class ModelHandler:
@@ -54,10 +57,10 @@ class ModelHandler:
         return input_data, input_labels, id_lst
 
     def train_step(self):
-        print("   preparing data")
+        print_debug_message(f"{self.__name__}: preparing data")
         input_data, input_labels, _ = self.prepare_data()
 
-        print("   training")
+        print_debug_message(f"{self.__name__}: training")
         self.model.fit(input_data, input_labels)
 
     def save(self, out_prefix):
@@ -78,18 +81,18 @@ class ModelHandler:
             self.score_dict['{}_none'.format(name)] = vals[2]
 
     def eval_model(self, data, class_wise=False, type_lst=None, pass_ids=False):
-        print("   preparing data")
+        print_debug_message(f"{self.__name__}: preparing data")
         input_data, true_labels, id_lst = self.prepare_data(data, type_lst=type_lst)
-        print("   making predictions")
+        print_debug_message(f"{self.__name__}: making predictions")
 
         if pass_ids:
             pred_labels = self.model.predict(id_lst)
         else:
             pred_labels = self.model.predict(input_data)
 
-        print("   computing scores")
+        print_debug_message(f"{self.__name__}: computing scores")
         if type_lst is not None:
-            print("type list {}".format(type_lst))
+            print_debug_message(f"{self.__name__}: type list {type_lst}")
         self.compute_scores(f1_score, true_labels, pred_labels, class_wise, 'f')
         # calculate class-wise and macro-average precision
         self.compute_scores(precision_score, true_labels, pred_labels, class_wise, 'p')
@@ -107,7 +110,7 @@ class TorchModelHandler:
     '''
 
     def __init__(self, num_ckps=10, use_score='f_macro', use_cuda=False, use_last_batch=True,
-                 num_gpus=None, checkpoint_path='data/checkpoints/',
+                 num_gpus=None, checkpoint_path='data/checkpoints/torch/',
                  result_path='data/', **params):
         super(TorchModelHandler, self).__init__()
         # data fields
@@ -267,7 +270,7 @@ class TorchModelHandler:
             self.optimizer.step()
 
         end_time = datetime.now()
-        print(f"\ttook: {(end_time - start_time).seconds // 60} min (Finished at {end_time.strftime('%Y%m%d - %H:%M:%S')})")
+        print_runtime(start_time=start_time, end_time=end_time, process_name='train_step')
         self.epoch += 1
 
     def compute_scores(self, score_fn, true_labels, pred_labels, class_wise, name):
@@ -467,3 +470,217 @@ class TorchModelHandler:
             labels = args['labels']
 
         return y_pred, labels
+
+
+class TensorFlowModelHandler:
+    def __init__(self, num_ckps=10, use_score='f_macro', use_cuda=False, use_last_batch=True,
+                 num_gpus=None, checkpoint_path='data/checkpoints/tensorflow/',
+                 result_path='data/', **params):
+        super(TensorFlowModelHandler, self).__init__()
+        # data fields
+        self.model = params['model']
+        self.embed_model = params['embed_model']
+        self.dataloader = params['dataloader']
+        self.batching_fn = params['batching_fn']
+        self.batching_kwargs = params['batching_kwargs']
+        self.setup_fn = params['setup_fn']
+        self.fine_tune = params.get('fine_tune', False)
+        self.save_checkpoints = params.get('save_ckp', False)
+
+        self.num_labels = self.model.num_labels
+        self.labels = params.get('labels', None)
+        self.name = params['name']
+        self.use_last_batch = use_last_batch
+
+        # optimization fields
+        self.loss_function = params['loss_function']
+        self.optimizer = params['optimizer']
+
+        # stats fields
+        self.checkpoint_path = checkpoint_path
+        self.checkpoint_num = 0
+        self.num_ckps = num_ckps
+        self.epoch = 0
+
+        self.result_path = result_path
+
+        # evaluation fields
+        self.score_dict = dict()
+        self.max_score = 0.
+        self.max_lst = []  # to keep top 5 scores
+        self.score_key = use_score
+
+        # GPU support
+        self.use_cuda = use_cuda
+
+        if num_gpus is not None:
+            self.model = tf.distribute.MirroredStrategy(devices=[f"/gpu:{gpu_i}" for gpu_i in range(num_gpus)]).scope(self.model)
+
+    def save_best(self, data=None, scores=None, data_name=None, class_wise=False):
+        if scores is None:
+            scores = self.eval_and_print(data=data, data_name=data_name, class_wise=class_wise)
+
+        # Placeholder logic for storing the best scores and saving the best model
+        # This is a simplified example to demonstrate the general logic
+        if scores[self.score_key] > self.max_score:
+            self.max_score = scores[self.score_key]
+
+            if self.save_checkpoints:
+                self.save(num='BEST')
+
+        # Additional logic to write top 5 scores to a file can be added here
+
+    def save(self, num=None):
+        # Example logic for saving the TensorFlow model in a checkpoint file
+        # Replace this with actual TensorFlow model saving mechanisms
+        if num is None:
+            check_num = self.checkpoint_num
+        else:
+            check_num = num
+
+        # TensorFlow model saving logic
+        self.model.save_weights('{}ckp-{}-{}.h5'.format(self.checkpoint_path, self.name, check_num))
+
+        # Increment the checkpoint number
+        if num is None:
+            self.checkpoint_num = (self.checkpoint_num + 1) % self.num_ckps
+
+    def load(self, filename='ckp-[NAME]-FINAL.tar', use_cpu=False):
+        full_path = self.checkpoint_path + filename
+        if use_cpu:
+            with tf.device('/cpu:0'):
+                self.model = tf.keras.models.load_model(full_path)
+        else:
+            self.model = tf.keras.models.load_model(full_path)
+
+        print("Model loaded from:", full_path)
+
+    def train_step(self, inputs, targets):
+        with tf.GradientTape() as tape:
+            # Forward pass
+            predictions = self.model(inputs)
+            # Calculate loss
+            loss = self.loss_function(targets, predictions)
+
+        # Calculate gradients
+        gradients = tape.gradient(loss, self.model.trainable_variables)
+        # Update weights
+        self.optimizer.apply_gradients(zip(gradients, self.model.trainable_variables))
+
+        return loss
+
+    def compute_scores(self, score_fn, true_labels, pred_labels, class_wise, name):
+        if score_fn == 'f1':
+            score_func = f1_score
+        elif score_fn == 'recall':
+            score_func = recall_score
+        else:
+            raise ValueError("Invalid score function. Please use 'f1' or 'recall'.")
+
+        if class_wise:
+            scores = score_func(true_labels, pred_labels, average=None)
+            score_dict = {f"{name}_class_{i}": score for i, score in enumerate(scores)}
+        else:
+            score = score_func(true_labels, pred_labels, average='macro')
+            score_dict = {name: score}
+
+        return score_dict
+
+    def eval_model(self, data=None, class_wise=False, correct_preds=False):
+        if data is None:
+            raise ValueError("No data provided for evaluation.")
+
+        true_labels = []  # True labels
+        pred_labels = []  # Predicted labels
+
+        for batch in data:
+            inputs, targets = batch  # Assuming the data yields batches of (inputs, targets)
+            predictions = self.model(inputs)  # Model prediction
+            if correct_preds:
+                true_labels.extend(np.argmax(targets, axis=1))  # True labels
+                pred_labels.extend(np.argmax(predictions, axis=1))  # Predicted labels
+            else:
+                true_labels.extend(targets)  # True labels
+                pred_labels.extend(predictions)  # Predicted labels
+
+        true_labels = np.array(true_labels)  # Convert to NumPy array
+        pred_labels = np.array(pred_labels)  # Convert to NumPy array
+
+        if correct_preds:
+            true_labels = true_labels.astype(int)
+            pred_labels = pred_labels.astype(int)
+
+        # Compute scores
+        score_dict = self.compute_scores('f1', true_labels, pred_labels, class_wise, 'evaluation')
+
+        return score_dict
+
+    def predict(self, data=None, correct_preds=False):
+        if data is None:
+            raise ValueError("No data provided for prediction.")
+
+        predictions = []  # Predicted labels
+
+        for batch in data:
+            inputs, _ = batch  # Assuming the data yields batches of (inputs, targets)
+            batch_predictions = self.model(inputs)  # Model prediction
+            if correct_preds:
+                batch_predictions = np.argmax(batch_predictions, axis=1)  # Convert to non-one-hot format
+            predictions.extend(batch_predictions)
+
+        predictions = np.array(predictions)  # Convert to NumPy array
+
+        if correct_preds:
+            predictions = predictions.astype(int)
+
+        return predictions
+
+    def eval_and_print(self, data=None, data_name=None, class_wise=False, correct_preds=False):
+        if data is None:
+            raise ValueError("No data provided for evaluation.")
+
+        # Evaluate the model
+        evaluation_scores = self.eval_model(data, class_wise, correct_preds)
+
+        # Printing the evaluation scores
+        print(f"Evaluation scores for {data_name}:")
+        for key, value in evaluation_scores.items():
+            print(f"{key}: {value}")
+
+        return evaluation_scores
+
+    def score(self, pred_labels, true_labels, class_wise, t2pred, marks, topic_wise=False):
+        if topic_wise:
+            # Calculate topic-wise scores
+            topic_scores = {}
+            for topic, preds, truths in t2pred:
+                topic_pred_labels = pred_labels[preds]
+                topic_true_labels = true_labels[truths]
+
+                # Compute and store scores for each topic
+                topic_score_dict = self.compute_scores('f1', topic_true_labels, topic_pred_labels, class_wise,
+                                                       f'{topic}_score')
+                topic_scores[topic] = topic_score_dict
+
+            # Create a DataFrame for topic-wise scores
+            topic_scores_df = pd.DataFrame(topic_scores).T
+            return topic_scores_df
+        else:
+            # Calculate overall scores
+            overall_score_dict = self.compute_scores('f1', true_labels, pred_labels, class_wise, 'overall_score')
+            return overall_score_dict
+
+    def get_pred_with_grad(self, sample_batched):
+        inputs, targets = sample_batched  # Assuming the batched data contains inputs and targets
+        inputs_tensor = tf.convert_to_tensor(inputs)
+        with tf.GradientTape() as tape:
+            predictions = self.model(inputs_tensor)
+            loss = self.loss_function(targets, predictions)
+        gradients = tape.gradient(loss, self.model.trainable_variables)
+        return predictions, gradients
+
+    def get_pred_noupdate(self, sample_batched):
+        inputs, targets = sample_batched  # Assuming the batched data contains inputs and targets
+        inputs_tensor = tf.convert_to_tensor(inputs)
+        predictions = self.model(inputs_tensor, training=False)  # Disable training mode to avoid weight updates
+        return predictions

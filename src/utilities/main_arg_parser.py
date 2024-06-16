@@ -39,6 +39,11 @@ def get_parser(parser=argparse.ArgumentParser(), job='train') -> argparse:
         default='f_macro'
     )
     parser.add_argument(
+        '-f', '--nn-framework', help='What framework should be used', required=False,
+        choices=['torch', 'tensorflow'],
+        default='torch'
+    )
+    parser.add_argument(
         '-v', '--verbose', help='Verbose mode', required=False,
         default=False, type=bool
     )

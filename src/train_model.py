@@ -1,3 +1,6 @@
+from utilities.runtime import print_debug_message
+
+
 def train(
         model_handler, num_epochs, verbose=True, dev_data=None, early_stopping=False, num_warm=0, is_bert=False
 ):
@@ -24,7 +27,7 @@ def train(
 
         if epoch >= num_warm:
             if verbose:
-                print("training loss: {}".format(model_handler.loss))
+                print_debug_message("training loss: {}".format(model_handler.loss))
                 # eval model on training data
                 if not is_bert:
                     # don't do train eval if bert, because super slow
