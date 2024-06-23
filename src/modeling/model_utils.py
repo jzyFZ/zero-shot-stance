@@ -195,7 +195,7 @@ class TorchModelHandler:
             # sort the scores
             self.max_lst = sorted(self.max_lst, key=lambda p: p[0][self.score_key])  # lowest first
             # write top 5 scores
-            f = open('results/{}{}.top5_{}.txt'.format(self.result_path, self.name, self.score_key), 'w')  # overrides
+            f = open('{}{}.top5_{}.txt'.format(self.result_path, self.name, self.score_key), 'w')  # overrides
             for p in self.max_lst:
                 f.write('Epoch: {}\nScore: {}\nAll Scores: {}\n'.format(p[1], p[0][self.score_key],
                                                                         json.dumps(p[0])))

@@ -1,6 +1,6 @@
 name:repffnn_t18
 ckp_path:checkpoints/
-res_path:data/
+res_path:results/
 add_resid:0
 topic_dim:1536
 text_dim:768

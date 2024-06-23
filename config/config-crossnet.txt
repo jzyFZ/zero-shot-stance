@@ -1,6 +1,6 @@
 name:CTSAN_t3
 ckp_path:checkpoints/
-res_path:data/
+res_path:results/
 vec_name:glove.6B.100d
 vec_dim:100
 b:64

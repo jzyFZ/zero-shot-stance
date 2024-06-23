@@ -1,6 +1,6 @@
 name:ffnn-bert-sep_t9
 ckp_path:checkpoints/
-res_path:data/
+res_path:results/
 max_top_len:5
 epochs:20
 together_in:0
