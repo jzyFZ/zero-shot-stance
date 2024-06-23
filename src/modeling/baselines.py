@@ -74,7 +74,7 @@ def eval_only(model_type, trn_name, dev_name):
     if model_type == 'bowv':
         print("Loading model")
         st = datetime.now()
-        model_handler.load('../../checkpoints/')
+        model_handler.load('checkpoints/')
         et = datetime.now()
         print_runtime(start_time=st, end_time=et, process_name=eval_only.__name__)
 

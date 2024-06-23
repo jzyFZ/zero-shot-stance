@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-train_data=../../data/VAST/vast_train.csv
-dev_data=../../data/VAST/vast_dev.csv
-test_data=../../data/VAST/vast_test.csv
+train_data=data/VAST/vast_train.csv
+dev_data=data/VAST/vast_dev.csv
+test_data=data/VAST/vast_test.csv
 
 echo "Saving document and topic vectors from BERT"
 python stance_clustering.py -m 1 -i ${train_data} -d ${dev_data} -e ${test_data}

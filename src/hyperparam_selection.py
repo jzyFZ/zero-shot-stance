@@ -69,7 +69,7 @@ def select_hyperparams(config, output_name, remove_checkpoints=False, score_key=
         time_lst.append(script_time)
 
         if remove_checkpoints:
-            checkpoint_path = '../checkpoints/{}-{}trials/'.format(config['dir_name'],
+            checkpoint_path = 'checkpoints/{}-{}trials/'.format(config['dir_name'],
                                                                    config['num_search_trials'])
             for fname in os.listdir(checkpoint_path):
                 os.remove(os.path.join(checkpoint_path, fname))
@@ -82,7 +82,7 @@ def select_hyperparams(config, output_name, remove_checkpoints=False, score_key=
     for ti in tn2vals:
         data.append([ti, score_lst[ti], time_lst[ti], json.dumps(tn2vals[ti])])
     df = pd.DataFrame(data, columns=['trial_num', 'avg_score', 'time', 'param_vals'])
-    df.to_csv('../data/{}-{}trials/{}'.format(config['dir_name'], config['num_search_trials'],
+    df.to_csv('data/{}-{}trials/{}'.format(config['dir_name'], config['num_search_trials'],
                                               output_name), index=False)
     print("results to {}".format(output_name))
 
@@ -183,11 +183,11 @@ def parse_equation(v1, s, v2):
 
 
 def make_dirs(config):
-    config_path = '../config/{}-{}trials/'.format(config['dir_name'],
+    config_path = 'config/{}-{}trials/'.format(config['dir_name'],
                                                   config['num_search_trials'])
-    checkpoint_path = '../checkpoints/{}-{}trials/'.format(config['dir_name'],
+    checkpoint_path = 'checkpoints/{}-{}trials/'.format(config['dir_name'],
                                                            config['num_search_trials'])
-    result_path = '../data/{}-{}trials/'.format(config['dir_name'],
+    result_path = 'data/{}-{}trials/'.format(config['dir_name'],
                                                 config['num_search_trials'])
     for p_name, p_path in [('config_path', config_path), ('ckp_path', checkpoint_path),
                            ('result_path', result_path)]:
@@ -200,11 +200,11 @@ def make_dirs(config):
 
 
 def remove_dirs(config):
-    config_path = '../config/{}-{}trials/'.format(config['dir_name'],
+    config_path = 'config/{}-{}trials/'.format(config['dir_name'],
                                                   config['num_search_trials'])
-    checkpoint_path = '../checkpoints/{}-{}trials/'.format(config['dir_name'],
+    checkpoint_path = 'checkpoints/{}-{}trials/'.format(config['dir_name'],
                                                            config['num_search_trials'])
-    result_path = '../data/{}-{}trials/'.format(config['dir_name'],
+    result_path = 'data/{}-{}trials/'.format(config['dir_name'],
                                                 config['num_search_trials'])
     for p_name, p_path in [('config_path', config_path), ('ckp_path', checkpoint_path),
                            ('result_path', result_path)]:

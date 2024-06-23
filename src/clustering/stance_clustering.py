@@ -9,14 +9,10 @@ from sklearn.metrics.pairwise import euclidean_distances
 
 import matplotlib.pyplot as plt
 
-from IPython import embed
-
 import sys
 import pickle
 
-sys.path.append('../modeling')
-import input_models as im
-import datasets, data_utils
+from modeling import input_models, datasets, data_utils
 
 use_cuda = torch.cuda.is_available()
 SEED = 4783
@@ -140,13 +136,13 @@ def save_bert_vectors(embed_model, dataloader, batching_fn, batching_kwargs, wor
     np.save('../../resources/topicreps/bert_tfidfW_doc-{}.vecs.npy'.format(dataname), docm)
     del docm
     topicm = np.array(topic_matrix)
-    np.save('../../resources/topicreps/bert_topic-{}.vecs.npy'.format(dataname), topicm)
+    np.save('resources/topicreps/bert_topic-{}.vecs.npy'.format(dataname), topicm)
     del topicm
-    print("[{}] saved to ../../resources/topicreps/bert_[tfidfW_doc/topic]-{}.vecs.npy".format(dataname, dataname))
+    print("[{}] saved to resources/topicreps/bert_[tfidfW_doc/topic]-{}.vecs.npy".format(dataname, dataname))
 
-    pickle.dump(doc2i, open('../../resources/topicreps/bert_tfidfW_doc-{}.vocab.pkl'.format(dataname), 'wb'))
-    pickle.dump(topic2i, open('../../resources/topicreps/bert_topic-{}.vocab.pkl'.format(dataname), 'wb'))
-    print("[{}] saved to ../../resources/topicreps/bert_[tfidfW_doc/topic]-{}.vocab.pkl".format(dataname, dataname))
+    pickle.dump(doc2i, open('resources/topicreps/bert_tfidfW_doc-{}.vocab.pkl'.format(dataname), 'wb'))
+    pickle.dump(topic2i, open('resources/topicreps/bert_topic-{}.vocab.pkl'.format(dataname), 'wb'))
+    print("[{}] saved to resources/topicreps/bert_[tfidfW_doc/topic]-{}.vocab.pkl".format(dataname, dataname))
 
 
 def load_vector_data(p, docname, topicname, dataname, dataloader, mode='concat'):
@@ -198,7 +194,7 @@ def cluster(dataname, trn_X, trn_Y, dev_X, dev_Y, k, trial_num, link_type='ward'
     trn_id2i = dict()
     for rid, eid in trn_Y.items():
         trn_id2i[rid] = labels[eid]
-    trn_oname = '../../resources/topicreps/{}_{}_{}_{}-train.labels.pkl'.format(dataname, link_type, m, k)
+    trn_oname = 'resources/topicreps/{}_{}_{}_{}-train.labels.pkl'.format(dataname, link_type, m, k)
     pickle.dump(trn_id2i, open(trn_oname, 'wb'))
     print("[{}] saved to {}".format(trial_num, trn_oname))
 
@@ -206,7 +202,7 @@ def cluster(dataname, trn_X, trn_Y, dev_X, dev_Y, k, trial_num, link_type='ward'
     clf  = NearestCentroid()
     clf.fit(trn_X, labels)
     print("[{}] finished fitting classifier.".format(trial_num))
-    cen_oname = '../../resources/topicreps/{}_{}_{}_{}.centroids.npy'.format(dataname, link_type, m, k)
+    cen_oname = 'resources/topicreps/{}_{}_{}_{}.centroids.npy'.format(dataname, link_type, m, k)
     np.save(cen_oname, clf.centroids_)
     print("[{}] saved to {}".format(trial_num, cen_oname))
 
@@ -217,7 +213,7 @@ def cluster(dataname, trn_X, trn_Y, dev_X, dev_Y, k, trial_num, link_type='ward'
     dev_id2i = dict()
     for rid, eid in dev_Y.items():
         dev_id2i[rid] = dev_labels[eid]
-    dev_oname = '../../resources/topicreps/{}_{}_{}_{}-dev.labels.pkl'.format(dataname, link_type, m, k)
+    dev_oname = 'resources/topicreps/{}_{}_{}_{}-dev.labels.pkl'.format(dataname, link_type, m, k)
     pickle.dump(dev_id2i, open(dev_oname, 'wb'))
     print("[{}] saved to {}".format(trial_num, dev_oname))
     print()
@@ -233,7 +229,7 @@ def calculate_sse(centroids, dev_X, dev_labels):
 
 
 def get_cluster_labels(dataname, k, X, Y, s):
-    trn_centroids = np.load('../../resources/topicreps/{}_ward_euclidean_{}.centroids.npy'.format(dataname, k))
+    trn_centroids = np.load('resources/topicreps/{}_ward_euclidean_{}.centroids.npy'.format(dataname, k))
     classes = np.array([i for i in range(len(trn_centroids))])
 
     clf = NearestCentroid()
@@ -244,7 +240,7 @@ def get_cluster_labels(dataname, k, X, Y, s):
     id2i = dict()
     for rid, eid in Y.items():
         id2i[rid] = labels[eid]
-    oname = '../../resources/topicreps/{}_ward_euclidean_{}-{}.labels.pkl'.format(dataname, k, s)
+    oname = 'resources/topicreps/{}_ward_euclidean_{}-{}.labels.pkl'.format(dataname, k, s)
     pickle.dump(id2i, open(oname, 'wb'))
     print("saved to {}".format(oname))
 
@@ -287,7 +283,7 @@ if __name__ == '__main__':
     if args['mode'] == '1':
         print("Saving vectors")
 
-        input_layer = im.BERTLayer(mode='text-level', use_cuda=use_cuda)
+        input_layer = input_models.BERTLayer(mode='text-level', use_cuda=use_cuda)
         setup_fn = data_utils.setup_helper_bert_ffnn
         batching_fn = data_utils.prepare_batch
         batch_args = {'keep_sen': False}
@@ -328,7 +324,7 @@ if __name__ == '__main__':
             sorted_k = [k_lst[i] for i in sort_k_indices]
             sorted_sse = [sse_lst[i] for i in sort_k_indices]
             plt.plot(sorted_k, sorted_sse, 'go--')
-            plt.savefig('../../resources/topicreps/SSE_clusters_{}.png'.format(args['file_name']))
+            plt.savefig('resources/topicreps/SSE_clusters_{}.png'.format(args['file_name']))
         else:
             cluster(args['file_name'], trn_X, trn_Y, dev_X, dev_Y, int(args['k']), 0)
 

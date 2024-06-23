@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 
-train_data=../data/VAST/vast_train.csv
-dev_data=../data/VAST/vast_dev.csv
+train_data=data/VAST/vast_train.csv
+dev_data=data/VAST/vast_dev.csv
 
 if [ $1 == 'eval' ]
 then

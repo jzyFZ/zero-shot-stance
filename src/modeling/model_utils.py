@@ -110,7 +110,7 @@ class TorchModelHandler:
     '''
 
     def __init__(self, num_ckps=10, use_score='f_macro', use_cuda=False, use_last_batch=True,
-                 num_gpus=None, checkpoint_path='data/checkpoints/torch/',
+                 num_gpus=None, checkpoint_path='checkpoints/',
                  result_path='data/', **params):
         super(TorchModelHandler, self).__init__()
         # data fields
@@ -195,7 +195,7 @@ class TorchModelHandler:
             # sort the scores
             self.max_lst = sorted(self.max_lst, key=lambda p: p[0][self.score_key])  # lowest first
             # write top 5 scores
-            f = open('{}{}.top5_{}.txt'.format(self.result_path, self.name, self.score_key), 'w')  # overrides
+            f = open('results/{}{}.top5_{}.txt'.format(self.result_path, self.name, self.score_key), 'w')  # overrides
             for p in self.max_lst:
                 f.write('Epoch: {}\nScore: {}\nAll Scores: {}\n'.format(p[1], p[0][self.score_key],
                                                                         json.dumps(p[0])))
@@ -233,8 +233,8 @@ class TorchModelHandler:
         if num is None:
             self.checkpoint_num = (self.checkpoint_num + 1) % self.num_ckps
 
-    def load(self, filename='data/checkpoints/ckp-[NAME]-FINAL.tar',
-             use_cpu=False):  # filename='data/checkpoints/ckp-[NAME]-FINAL.tar'):
+    def load(self, filename='checkpoints/ckp-[NAME]-FINAL.tar',
+             use_cpu=False):  # filename='checkpoints/ckp-[NAME]-FINAL.tar'):
         '''
         Loads a saved pytorch model from a checkpoint file.
         :param filename: the name of the file to load from. By default uses
@@ -474,7 +474,7 @@ class TorchModelHandler:
 
 class TensorFlowModelHandler:
     def __init__(self, num_ckps=10, use_score='f_macro', use_cuda=False, use_last_batch=True,
-                 num_gpus=None, checkpoint_path='data/checkpoints/tensorflow/',
+                 num_gpus=None, checkpoint_path='checkpoints/',
                  result_path='data/', **params):
         super(TensorFlowModelHandler, self).__init__()
         # data fields

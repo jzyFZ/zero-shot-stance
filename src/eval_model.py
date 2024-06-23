@@ -89,7 +89,7 @@ if __name__ == '__main__':
     vector_name = config.get('vec_name', '')
     vectors = load_vectors(vector_name=vector_name, vector_dim=vector_dim)
     if 'bert' not in config and 'bert' not in config['name']:
-        vocab_name = '../resources/{}.vocab.pkl'.format(vector_name)
+        vocab_name = 'resources/{}.vocab.pkl'.format(vector_name)
         data = datasets.StanceData(
             args['trn_data'], vocab_name, pad_val=len(vectors) - 1,
             max_tok_len=int(config.get('max_tok_len', '200')),
@@ -150,7 +150,7 @@ if __name__ == '__main__':
                   'setup_fn': setup_fn}
 
         model_handler = model_utils.TorchModelHandler(use_cuda=use_cuda,
-                                                      checkpoint_path=config.get('ckp_path', 'data/checkpoints/'),
+                                                      checkpoint_path=config.get('ckp_path', 'checkpoints/'),
                                                       result_path=config.get('res_path', 'data/gen-stance/'),
                                                       use_score=args['score_key'],
                                                       **kwargs)
@@ -187,7 +187,7 @@ if __name__ == '__main__':
                   'fine_tune': (config.get('fine-tune', 'no') == 'yes')}
 
         model_handler = model_utils.TorchModelHandler(use_cuda=use_cuda,
-                                                      checkpoint_path=config.get('ckp_path', 'data/checkpoints/'),
+                                                      checkpoint_path=config.get('ckp_path', 'checkpoints/'),
                                                       result_path=config.get('res_path', 'data/gen-stance/'),
                                                       use_score=args['score_key'],
                                                       **kwargs)
@@ -217,7 +217,7 @@ if __name__ == '__main__':
                   'setup_fn': setup_fn}
 
         model_handler = model_utils.TorchModelHandler(use_cuda=use_cuda, num_gpus=NUM_GPUS,
-                                                      checkpoint_path=config.get('ckp_path', 'data/checkpoints/'),
+                                                      checkpoint_path=config.get('ckp_path', 'checkpoints/'),
                                                       result_path=config.get('res_path', 'data/gen-stance/'),
                                                       use_score=args['score_key'],
                                                       **kwargs)
@@ -250,7 +250,7 @@ if __name__ == '__main__':
                   'setup_fn': setup_fn}
 
         model_handler = model_utils.TorchModelHandler(use_cuda=use_cuda, num_gpus=NUM_GPUS,
-                                                      checkpoint_path=config.get('ckp_path', 'data/checkpoints/'),
+                                                      checkpoint_path=config.get('ckp_path', 'checkpoints/'),
                                                       result_path=config.get('res_path', 'data/gen-stance/'),
                                                       use_score=args['score_key'],
                                                       **kwargs)
@@ -280,12 +280,12 @@ if __name__ == '__main__':
                   'setup_fn': setup_fn}
 
         model_handler = model_utils.TorchModelHandler(use_cuda=use_cuda,
-                                                      checkpoint_path=config.get('ckp_path', 'data/checkpoints/'),
+                                                      checkpoint_path=config.get('ckp_path', 'checkpoints/'),
                                                       result_path=config.get('res_path', 'data/gen-stance/'),
                                                       use_score=args['score_key'],
                                                       **kwargs)
 
-    cname = '{}ckp-[NAME]-{}.tar'.format(config.get('ckp_path', 'data/checkpoints/'), args['ckp_name'])
+    cname = '{}ckp-[NAME]-{}.tar'.format(config.get('ckp_path', 'checkpoints/'), args['ckp_name'])
     model_handler.load(filename=cname)
 
     if args['mode'] == 'eval':

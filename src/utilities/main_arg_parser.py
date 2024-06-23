@@ -39,18 +39,26 @@ def get_parser(parser=argparse.ArgumentParser(), job='train') -> argparse:
         default='f_macro'
     )
     parser.add_argument(
-        '-f', '--nn-framework', help='What framework should be used', required=False,
+        '-f', '--nn-framework',
+        help='What framework should be used',
+        required=False,
         choices=['torch', 'tensorflow'],
         default='torch'
     )
     parser.add_argument(
-        '-v', '--verbose', help='Verbose mode', required=False,
-        default=False, type=bool
+        '-v',
+        '--verbose',
+        action=argparse.BooleanOptionalAction,
+        help='Verbose mode',
+        required=False,
     )
     if job == 'train':
         parser.add_argument(
-            '-s', '--save-checkpoints', help='Whether to save checkpoints',
-            required=False, default=False, type=bool
+            '-s',
+            '--save-checkpoints',
+            action=argparse.BooleanOptionalAction,
+            help='Whether to save checkpoints',
+            required=False,
         )
     elif job == 'eval':
         parser.add_argument(

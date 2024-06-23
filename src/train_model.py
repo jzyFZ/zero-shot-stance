@@ -43,7 +43,7 @@ def train(
                 if l < prev_dev_loss:
                     break
 
-    print("TRAINED for {} epochs".format(epoch))
+    print(f"TRAINED for {num_epochs} epochs")
 
     if early_stopping:
         save_num = "BEST"

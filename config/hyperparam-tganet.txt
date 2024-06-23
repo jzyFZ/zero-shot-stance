@@ -4,7 +4,7 @@ name:tganet
 tune_params:in_dropout,hidden_size
 b:64
 epochs:50
-topic_path:../resources/topicreps
+topic_path:resources/topicreps
 topic_name:bert_tfidfW_ward_euclidean_197
 topic_dim:1536
 text_dim:768

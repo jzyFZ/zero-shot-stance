@@ -1,6 +1,6 @@
 name:BiCond_t0
-ckp_path:../checkpoints/
-res_path:../data/
+ckp_path:checkpoints/
+res_path:data/
 b:64
 vec_name:glove.6B.100d
 epochs:100

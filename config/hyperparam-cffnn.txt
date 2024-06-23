@@ -6,7 +6,7 @@ b:64
 epochs:50
 vec_dim:100
 vec_name:glove.6B.100d
-topic_path:../resources/topicreps
+topic_path:resources/topicreps
 topic_name:bert_tfidfW_ward_euclidean_197
 topic_dim:1536
 text_dim:768

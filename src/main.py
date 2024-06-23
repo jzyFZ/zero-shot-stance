@@ -91,7 +91,7 @@ def run(args, mode, config, vectors, use_cuda, data, dev_dataloader, nn_framewor
 
     model_handler = model_handler_class(
         use_cuda=use_cuda,
-        # checkpoint_path=config.get('ckp_path', 'data/checkpoints/'),
+        # checkpoint_path=config.get('ckp_path', 'checkpoints/'),
         result_path=config.get('res_path', 'data/gen-stance/'),
         use_score=args['score_key'],
         save_ckp=args['save_checkpoints'],
@@ -118,11 +118,8 @@ def prepare_run(config, args, dev_data_path, use_cuda, seed=0):
         vectors = np.load(
             f"{config['topic_path']}/{config['topic_name']}.{config.get('rep_v', 'centroids')}.npy"
         )
-        train_data_kwargs['topic_rep_dict'] = (f"{config['topic_path']}/"
-                                               f"{config['topic_name']}-train.labels.pkl")
-
-        dev_data_kwargs['topic_rep_dict'] = (f"{config['topic_path']}/"
-                                             f"{config['topic_name']}-dev.labels.pkl")
+        train_data_kwargs['topic_rep_dict'] = f"{config['topic_path']}/{config['topic_name']}-train.labels.pkl"
+        dev_data_kwargs['topic_rep_dict'] = f"{config['topic_path']}/{config['topic_name']}-dev.labels.pkl"
     elif 'vec_name' in config:
         vectors = load_vectors(vector_name=vector_name, vector_dim=vector_dim, seed=SEED)
     else:
@@ -192,6 +189,7 @@ if __name__ == '__main__':
     main_parser = get_parser(parser=main_parser, job=job_mode)
     kargs, _ = main_parser.parse_known_args()
     args = vars(kargs)
+    print(args)
     cs = config_settings(args=args)
 
     prepare_run(config=cs, args=args, dev_data_path=args['dev_data'], seed=SEED, use_cuda=use_cuda)
