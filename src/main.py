@@ -41,17 +41,17 @@ def run(args, mode, config, vectors, use_cuda, data, dev_dataloader, nn_framewor
     kwargs, batch_args = dict(), dict()
     print_debug_message(f"{__name__}: Running in {mode} mode.")
     if 'BiCond' in mode:
-        prepared_model = prepare_bicond(mode=mode, vectors=vectors, use_cuda=use_cuda, config=config)
+        prepared_model = prepare_bicond(mode=mode, vectors=vectors, use_cuda=use_cuda, config=config, nn_framework=nn_framework)
         name = mode + args['name']
         setup_function = data_utils.setup_helper_bicond
         loss_function = nn.CrossEntropyLoss()
     elif 'CTSAN' in mode:
-        prepared_model = prepare_ctsan(mode=mode, vectors=vectors, use_cuda=use_cuda, config=config)
+        prepared_model = prepare_ctsan(mode=mode, vectors=vectors, use_cuda=use_cuda, config=config, nn_framework=nn_framework)
         name = mode + args['name']
         setup_function = data_utils.setup_helper_bicond
         loss_function = nn.CrossEntropyLoss()
     elif 'ffnn-bert' in mode:
-        prepared_model = prepare_ffnn_bert(mode=mode, vectors=vectors, use_cuda=use_cuda, config=config)
+        prepared_model = prepare_ffnn_bert(mode=mode, vectors=vectors, use_cuda=use_cuda, config=config, nn_framework=nn_framework)
         name = mode
         batch_args['keep_sen'] = False
         kwargs['fine_tune'] = (config.get('fine-tune', 'no') == 'yes')
@@ -64,7 +64,7 @@ def run(args, mode, config, vectors, use_cuda, data, dev_dataloader, nn_framewor
         setup_function = data_utils.setup_helper_bert_attffnn
         loss_function = nn.CrossEntropyLoss()
     elif 'repffnn' in mode:
-        prepared_model = prepare_repffnn(mode=mode, vectors=vectors, use_cuda=use_cuda, config=config)
+        prepared_model = prepare_repffnn(mode=mode, vectors=vectors, use_cuda=use_cuda, config=config, nn_framework=nn_framework)
         name = mode
         batch_args['keep_sen'] = False
         setup_function = data_utils.setup_helper_bert_attffnn
