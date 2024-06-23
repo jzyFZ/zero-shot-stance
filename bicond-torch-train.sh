@@ -1,0 +1,1 @@
+python main.py -f torch -j train -c config-bicond.txt -k f-0_macro -t data/VAST/vast_train.csv -d data/VAST/vast_dev.csv -s -v
