@@ -1,0 +1,1985 @@
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.4530122051361409
+p_macro: 0.4953997682884479
+r_macro: 0.4578949881777974
+f-1_macro: 0.4894972825742367
+p-1_macro: 0.5230311926614123
+r-1_macro: 0.491741397815639
+f-0_macro: 0.41510878662299566
+p-0_macro: 0.46828598321135634
+r-0_macro: 0.42293254351907267
+[CTSAN_t3] epoch 33
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 13:39:32)
+training loss: 30.362305719405413
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9598133593760286
+p_macro: 0.9582496271116389
+r_macro: 0.961485548595672
+f-1_macro: 0.9598133593760286
+p-1_macro: 0.9582496271116389
+r-1_macro: 0.961485548595672
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.4563972005883545
+p_macro: 0.4790134283305765
+r_macro: 0.45695807278353917
+f-1_macro: 0.486419675421254
+p-1_macro: 0.4999468392536479
+r-1_macro: 0.48633266736186975
+f-0_macro: 0.42529959880872203
+p-0_macro: 0.4605488349451299
+r-0_macro: 0.42659980868488767
+[CTSAN_t3] epoch 34
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 13:40:28)
+training loss: 28.36488926410675
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9618608359969295
+p_macro: 0.9616435053147682
+r_macro: 0.9622331419278991
+f-1_macro: 0.9618608359969295
+p-1_macro: 0.9616435053147682
+r-1_macro: 0.9622331419278991
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.4434421941100672
+p_macro: 0.46672540083377845
+r_macro: 0.44383374799410397
+f-1_macro: 0.47880990233931414
+p-1_macro: 0.49155997410030894
+r-1_macro: 0.4789389701971416
+f-0_macro: 0.4071019434321383
+p-0_macro: 0.4452038048879838
+r-0_macro: 0.4078749187933848
+[CTSAN_t3] epoch 35
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 13:41:24)
+training loss: 28.20490024611354
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9591186336003347
+p_macro: 0.9595500061248475
+r_macro: 0.9588290081642491
+f-1_macro: 0.9591186336003347
+p-1_macro: 0.9595500061248475
+r-1_macro: 0.9588290081642491
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.4427194111577346
+p_macro: 0.4712504649992663
+r_macro: 0.44502947754935923
+f-1_macro: 0.4795062011865668
+p-1_macro: 0.4967883116686321
+r-1_macro: 0.48080539017476037
+f-0_macro: 0.4045796583388377
+p-0_macro: 0.44995158557250053
+r-0_macro: 0.4077391566788924
+[CTSAN_t3] epoch 36
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 13:42:19)
+training loss: 27.14889283850789
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9646310944107785
+p_macro: 0.9655370098950837
+r_macro: 0.9638767656004631
+f-1_macro: 0.9646310944107785
+p-1_macro: 0.9655370098950837
+r-1_macro: 0.9638767656004631
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.4520249187953074
+p_macro: 0.4845271921695649
+r_macro: 0.45682966057348856
+f-1_macro: 0.48472920496370664
+p-1_macro: 0.5086921281456638
+r-1_macro: 0.48890086747866884
+f-0_macro: 0.41782016436937813
+p-0_macro: 0.4617561073420518
+r-0_macro: 0.4227191299766227
+[CTSAN_t3] epoch 37
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 13:43:12)
+training loss: 26.191584756597877
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9597643231447157
+p_macro: 0.9596878659534543
+r_macro: 0.9602498543734237
+f-1_macro: 0.9597643231447157
+p-1_macro: 0.9596878659534543
+r-1_macro: 0.9602498543734237
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.4394522801753868
+p_macro: 0.4896323557106612
+r_macro: 0.44534788229412364
+f-1_macro: 0.49103737102075967
+p-1_macro: 0.5392318162557929
+r-1_macro: 0.4972779528494746
+f-0_macro: 0.3865250732500596
+p-0_macro: 0.44002528511101446
+r-0_macro: 0.39072459319961733
+[CTSAN_t3] epoch 38
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 13:44:07)
+training loss: 26.39126953110099
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9614709835950355
+p_macro: 0.961611372246526
+r_macro: 0.9616962921083339
+f-1_macro: 0.9614709835950355
+p-1_macro: 0.961611372246526
+r-1_macro: 0.9616962921083339
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.43898147119774705
+p_macro: 0.4729916280405853
+r_macro: 0.4437612918565868
+f-1_macro: 0.492445373249951
+p-1_macro: 0.5193616089596782
+r-1_macro: 0.4959677429604337
+f-0_macro: 0.38372768916623556
+p-0_macro: 0.4288431530804413
+r-0_macro: 0.3889003984878944
+[CTSAN_t3] epoch 39
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 13:45:00)
+training loss: 25.061041792854667
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9640676231577673
+p_macro: 0.9640182156635175
+r_macro: 0.9641184640414563
+f-1_macro: 0.9640676231577673
+p-1_macro: 0.9640182156635175
+r-1_macro: 0.9641184640414563
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.4471925162681852
+p_macro: 0.4775457684103368
+r_macro: 0.4504178714609394
+f-1_macro: 0.47796169511737513
+p-1_macro: 0.500573903767957
+r-1_macro: 0.4800939350207576
+f-0_macro: 0.4145705347963183
+p-0_macro: 0.4544910640662579
+r-0_macro: 0.4189150796208483
+[CTSAN_t3] epoch 40
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 13:45:53)
+training loss: 25.76664380170405
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9583316537202772
+p_macro: 0.9569059684458967
+r_macro: 0.9599625063411669
+f-1_macro: 0.9583316537202772
+p-1_macro: 0.9569059684458967
+r-1_macro: 0.9599625063411669
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.447639983185863
+p_macro: 0.4707049796812434
+r_macro: 0.4508828671321133
+f-1_macro: 0.49441776661073966
+p-1_macro: 0.5092909218716485
+r-1_macro: 0.49682073293718193
+f-0_macro: 0.3993540528449433
+p-0_macro: 0.4344778080175276
+r-0_macro: 0.4028912112701993
+[CTSAN_t3] epoch 41
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 13:46:46)
+training loss: 25.044792203232646
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9615600124142364
+p_macro: 0.9601375774100266
+r_macro: 0.9631061168989952
+f-1_macro: 0.9615600124142364
+p-1_macro: 0.9601375774100266
+r-1_macro: 0.9631061168989952
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.45534187962869854
+p_macro: 0.4711060304547379
+r_macro: 0.45641506448479197
+f-1_macro: 0.49161785759984206
+p-1_macro: 0.5008605557674033
+r-1_macro: 0.4917887243659768
+f-0_macro: 0.416783486030813
+p-0_macro: 0.44245426772817886
+r-0_macro: 0.4187285729631846
+[CTSAN_t3] epoch 42
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 13:47:39)
+training loss: 25.57425068411976
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9620743004361533
+p_macro: 0.9606069381523765
+r_macro: 0.9637383737882507
+f-1_macro: 0.9620743004361533
+p-1_macro: 0.9606069381523765
+r-1_macro: 0.9637383737882507
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.4433601324231762
+p_macro: 0.4741837286516879
+r_macro: 0.44604378339214906
+f-1_macro: 0.4847855329800798
+p-1_macro: 0.5057543365590363
+r-1_macro: 0.48628886766422585
+f-0_macro: 0.4003369360424631
+p-0_macro: 0.44440752844347614
+r-0_macro: 0.4041768079022349
+[CTSAN_t3] epoch 43
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 13:48:32)
+training loss: 25.59747288003564
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9619178611875788
+p_macro: 0.9616720282247985
+r_macro: 0.962366636387296
+f-1_macro: 0.9619178611875788
+p-1_macro: 0.9616720282247985
+r-1_macro: 0.962366636387296
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.4411063991020001
+p_macro: 0.4705190407062836
+r_macro: 0.44614577455358434
+f-1_macro: 0.49218928909940146
+p-1_macro: 0.5141375715872378
+r-1_macro: 0.4956724246508575
+f-0_macro: 0.387841906498396
+p-0_macro: 0.42606404177163465
+r-0_macro: 0.39435154919202614
+[CTSAN_t3] epoch 44
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 13:49:27)
+training loss: 25.775186982005835
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9634153282965879
+p_macro: 0.9637425984569102
+r_macro: 0.9630907364902325
+f-1_macro: 0.9634153282965879
+p-1_macro: 0.9637425984569102
+r-1_macro: 0.9630907364902325
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.4443716063257863
+p_macro: 0.4750537185948356
+r_macro: 0.4474836627796
+f-1_macro: 0.4851172337339662
+p-1_macro: 0.5026764651063717
+r-1_macro: 0.48715380445730627
+f-0_macro: 0.4015156420968973
+p-0_macro: 0.4504541630864917
+r-0_macro: 0.4060710832834584
+[CTSAN_t3] epoch 45
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 13:50:21)
+training loss: 27.017745283432305
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.962294358562246
+p_macro: 0.9626737448108246
+r_macro: 0.9619304715515957
+f-1_macro: 0.962294358562246
+p-1_macro: 0.9626737448108246
+r-1_macro: 0.9619304715515957
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.4484389423879473
+p_macro: 0.49162491301843153
+r_macro: 0.45446938125723463
+f-1_macro: 0.47658258642752377
+p-1_macro: 0.5087541397633569
+r-1_macro: 0.4814625127332092
+f-0_macro: 0.4181419358131561
+p-0_macro: 0.4764932178742087
+r-0_macro: 0.4249466210375008
+[CTSAN_t3] epoch 46
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 13:51:15)
+training loss: 25.256915919482708
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.963292222337568
+p_macro: 0.9646627007655489
+r_macro: 0.9620295086618795
+f-1_macro: 0.963292222337568
+p-1_macro: 0.9646627007655489
+r-1_macro: 0.9620295086618795
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.44461553699045187
+p_macro: 0.4969861734198582
+r_macro: 0.4517178776075755
+f-1_macro: 0.49021966257731003
+p-1_macro: 0.5272358951129901
+r-1_macro: 0.4945603063214545
+f-0_macro: 0.3956712741844292
+p-0_macro: 0.46978791516606644
+r-0_macro: 0.40615512893308575
+[CTSAN_t3] epoch 47
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 13:52:11)
+training loss: 23.537197361700237
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9635309879794792
+p_macro: 0.962812731914591
+r_macro: 0.9650392009951263
+f-1_macro: 0.9635309879794792
+p-1_macro: 0.962812731914591
+r-1_macro: 0.9650392009951263
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.4548015722429783
+p_macro: 0.48402818378122453
+r_macro: 0.45557401086437954
+f-1_macro: 0.5039289011319935
+p-1_macro: 0.5233500685604465
+r-1_macro: 0.5033702572568967
+f-0_macro: 0.40367160219856163
+p-0_macro: 0.45055096611733525
+r-0_macro: 0.4059418688519558
+[CTSAN_t3] epoch 48
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 13:53:06)
+training loss: 22.89458753541112
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9652803292360156
+p_macro: 0.9666961950461515
+r_macro: 0.9639233034746408
+f-1_macro: 0.9652803292360156
+p-1_macro: 0.9666961950461515
+r-1_macro: 0.9639233034746408
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.43016557949391127
+p_macro: 0.49020754757497936
+r_macro: 0.4396966054170209
+f-1_macro: 0.48182699884827546
+p-1_macro: 0.5223758184347626
+r-1_macro: 0.4885798444499095
+f-0_macro: 0.3762482664764417
+p-0_macro: 0.4628957860004748
+r-0_macro: 0.3892211326468497
+[CTSAN_t3] epoch 49
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 13:54:01)
+training loss: 22.511079406365752
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9648020511882661
+p_macro: 0.9654442641213503
+r_macro: 0.9643686451399821
+f-1_macro: 0.9648020511882661
+p-1_macro: 0.9654442641213503
+r-1_macro: 0.9643686451399821
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.44274826736259093
+p_macro: 0.4953070594858133
+r_macro: 0.4516934832609875
+f-1_macro: 0.4963914237266159
+p-1_macro: 0.5340361003518899
+r-1_macro: 0.5038107961091507
+f-0_macro: 0.38534130846081976
+p-0_macro: 0.45608862544122336
+r-0_macro: 0.3962075103970044
+[CTSAN_t3] epoch 50
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 13:54:57)
+training loss: 23.61260069720447
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9611690796578255
+p_macro: 0.9605598901402553
+r_macro: 0.9617879511695379
+f-1_macro: 0.9611690796578255
+p-1_macro: 0.9605598901402553
+r-1_macro: 0.9617879511695379
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.45560461411910685
+p_macro: 0.4756848376020635
+r_macro: 0.45695048959145596
+f-1_macro: 0.48916190070046534
+p-1_macro: 0.4979530056382857
+r-1_macro: 0.49012130149125505
+f-0_macro: 0.420582994235136
+p-0_macro: 0.4573319233973511
+r-0_macro: 0.42387643294507615
+[CTSAN_t3] epoch 51
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 13:55:52)
+training loss: 25.09294052235782
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.961468027810238
+p_macro: 0.9622336961741569
+r_macro: 0.9607718777737082
+f-1_macro: 0.961468027810238
+p-1_macro: 0.9622336961741569
+r-1_macro: 0.9607718777737082
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.44675583052528695
+p_macro: 0.4907901074836119
+r_macro: 0.45359004822528237
+f-1_macro: 0.4909519314390687
+p-1_macro: 0.5276358926986542
+r-1_macro: 0.4964506675919094
+f-0_macro: 0.40051454087464283
+p-0_macro: 0.45332662979721805
+r-0_macro: 0.4082816935991283
+[CTSAN_t3] epoch 52
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 13:56:48)
+training loss: 23.099361922591925
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9628414669842152
+p_macro: 0.9625193884342439
+r_macro: 0.963238527432622
+f-1_macro: 0.9628414669842152
+p-1_macro: 0.9625193884342439
+r-1_macro: 0.963238527432622
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.4470456310685272
+p_macro: 0.47093520144858414
+r_macro: 0.45145200079042613
+f-1_macro: 0.48148148148148145
+p-1_macro: 0.49382303474515615
+r-1_macro: 0.48355398404083266
+f-0_macro: 0.4110695496266025
+p-0_macro: 0.45663881665098954
+r-0_macro: 0.4178324100077242
+[CTSAN_t3] epoch 53
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 13:57:42)
+training loss: 22.647110644727945
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9641345552272206
+p_macro: 0.9645562069396236
+r_macro: 0.9639452317142858
+f-1_macro: 0.9641345552272206
+p-1_macro: 0.9645562069396236
+r-1_macro: 0.9639452317142858
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.4471469658931971
+p_macro: 0.48532612863510777
+r_macro: 0.4525589835895904
+f-1_macro: 0.4860782768584187
+p-1_macro: 0.5106852330366541
+r-1_macro: 0.4893849995011568
+f-0_macro: 0.4068720586792703
+p-0_macro: 0.46781565572001577
+r-0_macro: 0.4141780867465688
+[CTSAN_t3] epoch 54
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 13:58:35)
+training loss: 24.456485206261277
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9625827176307005
+p_macro: 0.9624786439071414
+r_macro: 0.9627042585054278
+f-1_macro: 0.9625827176307005
+p-1_macro: 0.9624786439071414
+r-1_macro: 0.9627042585054278
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.4449227918777107
+p_macro: 0.4769671613438555
+r_macro: 0.44956580650352546
+f-1_macro: 0.4913864407195471
+p-1_macro: 0.5096207274123828
+r-1_macro: 0.493304079520043
+f-0_macro: 0.3960889977045559
+p-0_macro: 0.44815939880319294
+r-0_macro: 0.404627370337973
+[CTSAN_t3] epoch 55
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 13:59:29)
+training loss: 23.741154240444303
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9656931192662119
+p_macro: 0.9652395673624484
+r_macro: 0.9661569944281779
+f-1_macro: 0.9656931192662119
+p-1_macro: 0.9652395673624484
+r-1_macro: 0.9661569944281779
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.45170626140150305
+p_macro: 0.4735539973461044
+r_macro: 0.45313644582279894
+f-1_macro: 0.5038380348630956
+p-1_macro: 0.5185896855002906
+r-1_macro: 0.5042719400422333
+f-0_macro: 0.397452468231874
+p-0_macro: 0.4281530383647791
+r-0_macro: 0.39988434131843736
+[CTSAN_t3] epoch 56
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 14:00:24)
+training loss: 21.615232149139047
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9617101428895317
+p_macro: 0.9634107518059851
+r_macro: 0.9607346653380754
+f-1_macro: 0.9617101428895317
+p-1_macro: 0.9634107518059851
+r-1_macro: 0.9607346653380754
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.43940559175958466
+p_macro: 0.49449874111420417
+r_macro: 0.44893152269129466
+f-1_macro: 0.4845553242525739
+p-1_macro: 0.5210123049481479
+r-1_macro: 0.4901924263539143
+f-0_macro: 0.3912832221878924
+p-0_macro: 0.47464610176245015
+r-0_macro: 0.40585229859480587
+[CTSAN_t3] epoch 57
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 14:01:18)
+training loss: 21.33535421639681
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9655610744783601
+p_macro: 0.9651179248154138
+r_macro: 0.9660132739909176
+f-1_macro: 0.9655610744783601
+p-1_macro: 0.9651179248154138
+r-1_macro: 0.9660132739909176
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.4449878350290963
+p_macro: 0.4692722345405272
+r_macro: 0.4479605352942642
+f-1_macro: 0.4918212314358543
+p-1_macro: 0.5083889378488397
+r-1_macro: 0.4937117487406593
+f-0_macro: 0.39678616098730196
+p-0_macro: 0.43231815379873634
+r-0_macro: 0.40037823100020975
+[CTSAN_t3] epoch 58
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 14:02:11)
+training loss: 20.62871698103845
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9663459269708573
+p_macro: 0.965805495889696
+r_macro: 0.9671086714492888
+f-1_macro: 0.9663459269708573
+p-1_macro: 0.965805495889696
+r-1_macro: 0.9671086714492888
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.4502573068378705
+p_macro: 0.4816114633275792
+r_macro: 0.45388019926534334
+f-1_macro: 0.4909513798652773
+p-1_macro: 0.5150887019670068
+r-1_macro: 0.49346456720433696
+f-0_macro: 0.4079921241439302
+p-0_macro: 0.45131481161147313
+r-0_macro: 0.41189284307556945
+[CTSAN_t3] epoch 59
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 14:03:04)
+training loss: 20.853342180140316
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9608769741468358
+p_macro: 0.9593633416441109
+r_macro: 0.9627709273707402
+f-1_macro: 0.9608769741468358
+p-1_macro: 0.9593633416441109
+r-1_macro: 0.9627709273707402
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.44757835987697775
+p_macro: 0.47953624900317554
+r_macro: 0.4509519290057491
+f-1_macro: 0.4982851032296982
+p-1_macro: 0.5220892921982698
+r-1_macro: 0.4998912077151014
+f-0_macro: 0.39353580773120767
+p-0_macro: 0.4374017861980975
+r-0_macro: 0.399037899830681
+[CTSAN_t3] epoch 60
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 14:03:58)
+training loss: 21.08970833569765
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9638545308740709
+p_macro: 0.9638520443119707
+r_macro: 0.9638745645034256
+f-1_macro: 0.9638545308740709
+p-1_macro: 0.9638520443119707
+r-1_macro: 0.9638745645034256
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.4357917671423774
+p_macro: 0.47949393397877443
+r_macro: 0.4413531417152481
+f-1_macro: 0.4806214042465878
+p-1_macro: 0.5084374854040569
+r-1_macro: 0.483910847518589
+f-0_macro: 0.38705074554869684
+p-0_macro: 0.45519299348749787
+r-0_macro: 0.3954491045531973
+[CTSAN_t3] epoch 61
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 14:04:52)
+training loss: 23.848732662387192
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.964259819578535
+p_macro: 0.9642895713228293
+r_macro: 0.9642941396828574
+f-1_macro: 0.964259819578535
+p-1_macro: 0.9642895713228293
+r-1_macro: 0.9642941396828574
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.44256740580039455
+p_macro: 0.4800736751681538
+r_macro: 0.4460568891932515
+f-1_macro: 0.495741454594589
+p-1_macro: 0.5208596671086466
+r-1_macro: 0.49803058639168657
+f-0_macro: 0.3866720187922719
+p-0_macro: 0.4391456465552494
+r-0_macro: 0.3917639355667071
+[CTSAN_t3] epoch 62
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 14:05:45)
+training loss: 20.776555333286524
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9649604761965261
+p_macro: 0.9653660856433522
+r_macro: 0.9646752110612408
+f-1_macro: 0.9649604761965261
+p-1_macro: 0.9653660856433522
+r-1_macro: 0.9646752110612408
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.43627099575249445
+p_macro: 0.4706509157243584
+r_macro: 0.4407138034683266
+f-1_macro: 0.47315299078227896
+p-1_macro: 0.4935951015710813
+r-1_macro: 0.4752162659717178
+f-0_macro: 0.39634482837195345
+p-0_macro: 0.44965902164201627
+r-0_macro: 0.4042199816869491
+[CTSAN_t3] epoch 63
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 14:06:41)
+training loss: 19.113382865209132
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9661745144811261
+p_macro: 0.9656768747288821
+r_macro: 0.9668078919297849
+f-1_macro: 0.9661745144811261
+p-1_macro: 0.9656768747288821
+r-1_macro: 0.9668078919297849
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.44445792345830265
+p_macro: 0.4766760678423381
+r_macro: 0.4490618045185648
+f-1_macro: 0.49104276885989284
+p-1_macro: 0.5140031342204993
+r-1_macro: 0.49401200782135185
+f-0_macro: 0.3945763785815344
+p-0_macro: 0.4390890087750264
+r-0_macro: 0.4011097299592304
+[CTSAN_t3] epoch 64
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 14:07:36)
+training loss: 23.277261916548014
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9622993774081671
+p_macro: 0.9632565146424268
+r_macro: 0.9613647425790012
+f-1_macro: 0.9622993774081671
+p-1_macro: 0.9632565146424268
+r-1_macro: 0.9613647425790012
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.4345718507531043
+p_macro: 0.4611201014429083
+r_macro: 0.4403767518328747
+f-1_macro: 0.4767867792772007
+p-1_macro: 0.49495608374435784
+r-1_macro: 0.48059001385957784
+f-0_macro: 0.39121467060996734
+p-0_macro: 0.43285495020844805
+r-0_macro: 0.3984182741739944
+[CTSAN_t3] epoch 65
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 14:08:32)
+training loss: 23.707340957596898
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9656341433976358
+p_macro: 0.9651031170184191
+r_macro: 0.9663997760289161
+f-1_macro: 0.9656341433976358
+p-1_macro: 0.9651031170184191
+r-1_macro: 0.9663997760289161
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.4452323726298811
+p_macro: 0.47424943337840925
+r_macro: 0.4490133453954752
+f-1_macro: 0.4829228833236689
+p-1_macro: 0.5048947342178874
+r-1_macro: 0.4855955074886839
+f-0_macro: 0.4066713989349045
+p-0_macro: 0.44900504070201724
+r-0_macro: 0.41033771721171014
+[CTSAN_t3] epoch 66
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 14:09:28)
+training loss: 19.101452252827585
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9664373312534909
+p_macro: 0.9658758644265939
+r_macro: 0.9670903185560323
+f-1_macro: 0.9664373312534909
+p-1_macro: 0.9658758644265939
+r-1_macro: 0.9670903185560323
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.45841953525769674
+p_macro: 0.4788117081695063
+r_macro: 0.4615351914260722
+f-1_macro: 0.502499802196708
+p-1_macro: 0.5182643612424976
+r-1_macro: 0.5041149315504617
+f-0_macro: 0.4120164119736902
+p-0_macro: 0.4410979296641728
+r-0_macro: 0.41624096496478064
+[CTSAN_t3] epoch 67
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 14:10:24)
+training loss: 18.76923947967589
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9660622118511767
+p_macro: 0.9648784954872754
+r_macro: 0.9672805776334957
+f-1_macro: 0.9660622118511767
+p-1_macro: 0.9648784954872754
+r-1_macro: 0.9672805776334957
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.4565094798805694
+p_macro: 0.48128983199325237
+r_macro: 0.4601475627577523
+f-1_macro: 0.500578935018177
+p-1_macro: 0.5193419134126199
+r-1_macro: 0.503273030506958
+f-0_macro: 0.4109124364931957
+p-0_macro: 0.44563534394042864
+r-0_macro: 0.4145943250003836
+[CTSAN_t3] epoch 68
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 14:11:17)
+training loss: 20.03558547794819
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.964020897873756
+p_macro: 0.9622611653485141
+r_macro: 0.9659359802017763
+f-1_macro: 0.964020897873756
+p-1_macro: 0.9622611653485141
+r-1_macro: 0.9659359802017763
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.4649734622820654
+p_macro: 0.48828193088972194
+r_macro: 0.46679848114884365
+f-1_macro: 0.5011692213995392
+p-1_macro: 0.5153286356801595
+r-1_macro: 0.5018142797499557
+f-0_macro: 0.4273203598570247
+p-0_macro: 0.46404284211310887
+r-0_macro: 0.4303815048417046
+0.4273203598570247 0.4297118788754011
+[CTSAN_t3] epoch 69
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 14:12:11)
+training loss: 20.597265526652336
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9649024587197047
+p_macro: 0.9644467945956986
+r_macro: 0.9654561579001535
+f-1_macro: 0.9649024587197047
+p-1_macro: 0.9644467945956986
+r-1_macro: 0.9654561579001535
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.45252496068238074
+p_macro: 0.49600683888181757
+r_macro: 0.4579211135373629
+f-1_macro: 0.4985428270735492
+p-1_macro: 0.5350653956652996
+r-1_macro: 0.5030240855442887
+f-0_macro: 0.4040733183028265
+p-0_macro: 0.45763208807388106
+r-0_macro: 0.4096916450541974
+[CTSAN_t3] epoch 70
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 14:13:03)
+training loss: 19.94970411621034
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9637203868488614
+p_macro: 0.9627961281903518
+r_macro: 0.9648724458713075
+f-1_macro: 0.9637203868488614
+p-1_macro: 0.9627961281903518
+r-1_macro: 0.9648724458713075
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.45068061181089464
+p_macro: 0.48616529990372187
+r_macro: 0.4549051006324086
+f-1_macro: 0.5046782412491359
+p-1_macro: 0.532101807845515
+r-1_macro: 0.5080021586880362
+f-0_macro: 0.39447466653031443
+p-0_macro: 0.4419183123565906
+r-0_macro: 0.3987907247978147
+[CTSAN_t3] epoch 71
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 14:13:56)
+training loss: 18.404010359197855
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9657975088627281
+p_macro: 0.9652428623050469
+r_macro: 0.9667861859906758
+f-1_macro: 0.9657975088627281
+p-1_macro: 0.9652428623050469
+r-1_macro: 0.9667861859906758
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.43900282961627957
+p_macro: 0.47221423132823453
+r_macro: 0.44529156277046694
+f-1_macro: 0.4988024513913232
+p-1_macro: 0.5234542846065259
+r-1_macro: 0.5045111623299088
+f-0_macro: 0.3773791976551763
+p-0_macro: 0.4245411552154737
+r-0_macro: 0.3827399495623795
+[CTSAN_t3] epoch 72
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 14:14:49)
+training loss: 18.63183121010661
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9674222834265004
+p_macro: 0.9670081782990416
+r_macro: 0.9678471467826165
+f-1_macro: 0.9674222834265004
+p-1_macro: 0.9670081782990416
+r-1_macro: 0.9678471467826165
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.44411303747345093
+p_macro: 0.46707745206194157
+r_macro: 0.4464498106585972
+f-1_macro: 0.48554292625089973
+p-1_macro: 0.4974318058571847
+r-1_macro: 0.48623402669350885
+f-0_macro: 0.4012455090464448
+p-0_macro: 0.4451007799186853
+r-0_macro: 0.40512918885461585
+[CTSAN_t3] epoch 73
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 14:15:42)
+training loss: 18.389338709414005
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9634181106226052
+p_macro: 0.9640136550579972
+r_macro: 0.9628564508758671
+f-1_macro: 0.9634181106226052
+p-1_macro: 0.9640136550579972
+r-1_macro: 0.9628564508758671
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.42991663011631776
+p_macro: 0.4774462049320614
+r_macro: 0.4391020733013893
+f-1_macro: 0.48390793854323966
+p-1_macro: 0.5167170506019426
+r-1_macro: 0.49313301127766757
+f-0_macro: 0.3733016761781282
+p-0_macro: 0.4391200304252747
+r-0_macro: 0.3821744445979058
+[CTSAN_t3] epoch 74
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 14:16:35)
+training loss: 20.947722419165075
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9643450447029323
+p_macro: 0.9630732180252787
+r_macro: 0.9659577334812477
+f-1_macro: 0.9643450447029323
+p-1_macro: 0.9630732180252787
+r-1_macro: 0.9659577334812477
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.4515557905259764
+p_macro: 0.4734753192300362
+r_macro: 0.453605457936896
+f-1_macro: 0.4998351560571072
+p-1_macro: 0.5105572643285569
+r-1_macro: 0.5008994427572744
+f-0_macro: 0.400764116522139
+p-0_macro: 0.43950775951934345
+r-0_macro: 0.403866406805498
+[CTSAN_t3] epoch 75
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 14:17:28)
+training loss: 19.60988635569811
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9666204549142616
+p_macro: 0.9664058546100683
+r_macro: 0.9669212935461059
+f-1_macro: 0.9666204549142616
+p-1_macro: 0.9664058546100683
+r-1_macro: 0.9669212935461059
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.4468364866146592
+p_macro: 0.4735435809355783
+r_macro: 0.45096796089640456
+f-1_macro: 0.4968544341522483
+p-1_macro: 0.5131633009539986
+r-1_macro: 0.49949724873716433
+f-0_macro: 0.39532971628462343
+p-0_macro: 0.4389588621238416
+r-0_macro: 0.4004314309245021
+[CTSAN_t3] epoch 76
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 14:18:22)
+training loss: 18.827124503441155
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9642582303531975
+p_macro: 0.9625368650571803
+r_macro: 0.9663447654555343
+f-1_macro: 0.9642582303531975
+p-1_macro: 0.9625368650571803
+r-1_macro: 0.9663447654555343
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.4527365019927949
+p_macro: 0.46892436016972755
+r_macro: 0.4540190683954275
+f-1_macro: 0.5057022421931543
+p-1_macro: 0.5135224137729868
+r-1_macro: 0.5065469347837277
+f-0_macro: 0.3953338232687471
+p-0_macro: 0.42558915249217016
+r-0_macro: 0.3975717303786914
+[CTSAN_t3] epoch 77
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 14:19:15)
+training loss: 18.3338690251112
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9660923498662872
+p_macro: 0.965943159039124
+r_macro: 0.9665984970812295
+f-1_macro: 0.9660923498662872
+p-1_macro: 0.965943159039124
+r-1_macro: 0.9665984970812295
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.44767806312057096
+p_macro: 0.4753033162124072
+r_macro: 0.4498492398579919
+f-1_macro: 0.49099960895387335
+p-1_macro: 0.5081789277222429
+r-1_macro: 0.4920624208443984
+f-0_macro: 0.40125926951013596
+p-0_macro: 0.4463316547255501
+r-0_macro: 0.4045383116185566
+[CTSAN_t3] epoch 78
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 14:20:07)
+training loss: 19.014890872873366
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9646387950376684
+p_macro: 0.9629701593648953
+r_macro: 0.9664024971039131
+f-1_macro: 0.9646387950376684
+p-1_macro: 0.9629701593648953
+r-1_macro: 0.9664024971039131
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.4537742233455498
+p_macro: 0.47044409959553374
+r_macro: 0.4544148635887235
+f-1_macro: 0.47905679932656325
+p-1_macro: 0.4850203764531697
+r-1_macro: 0.4786541847854752
+f-0_macro: 0.42636520251672366
+p-0_macro: 0.46305824695102843
+r-0_macro: 0.4285050309736098
+[CTSAN_t3] epoch 79
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 14:21:00)
+training loss: 19.536565033718944
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9650883927827696
+p_macro: 0.9652369307186607
+r_macro: 0.9654402250339594
+f-1_macro: 0.9650883927827696
+p-1_macro: 0.9652369307186607
+r-1_macro: 0.9654402250339594
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.44500440638114797
+p_macro: 0.47251162350518633
+r_macro: 0.4503083833500601
+f-1_macro: 0.489745843237076
+p-1_macro: 0.5031491339191667
+r-1_macro: 0.49348588718773856
+f-0_macro: 0.39749645671911327
+p-0_macro: 0.4436710129079893
+r-0_macro: 0.40520019029203685
+[CTSAN_t3] epoch 80
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 14:21:53)
+training loss: 19.2508949842304
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9646952705813275
+p_macro: 0.9652287195335947
+r_macro: 0.9641681260731328
+f-1_macro: 0.9646952705813275
+p-1_macro: 0.9652287195335947
+r-1_macro: 0.9641681260731328
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.45032039790104306
+p_macro: 0.49540083793214085
+r_macro: 0.46047564515870104
+f-1_macro: 0.48596343958260596
+p-1_macro: 0.5147331310390874
+r-1_macro: 0.49381266121053025
+f-0_macro: 0.41267806560631676
+p-0_macro: 0.47980065502260033
+r-0_macro: 0.42573039915289357
+[CTSAN_t3] epoch 81
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 14:22:45)
+training loss: 20.66281937994063
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9610831184472289
+p_macro: 0.9615501802654677
+r_macro: 0.9611535844934581
+f-1_macro: 0.9610831184472289
+p-1_macro: 0.9615501802654677
+r-1_macro: 0.9611535844934581
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.45718051493881084
+p_macro: 0.49175421209117937
+r_macro: 0.46322482949737775
+f-1_macro: 0.5060036117711489
+p-1_macro: 0.5356313854728754
+r-1_macro: 0.5088037868865897
+f-0_macro: 0.40723159167411543
+p-0_macro: 0.4515371565706719
+r-0_macro: 0.4159212538812926
+[CTSAN_t3] epoch 82
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 14:23:37)
+training loss: 21.413384292274714
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9647880597468315
+p_macro: 0.9644779563623573
+r_macro: 0.9651076297269153
+f-1_macro: 0.9647880597468315
+p-1_macro: 0.9644779563623573
+r-1_macro: 0.9651076297269153
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.4652867386585649
+p_macro: 0.49482855496363326
+r_macro: 0.4704640643738716
+f-1_macro: 0.4956159976157335
+p-1_macro: 0.5197653880605734
+r-1_macro: 0.500496110612268
+f-0_macro: 0.43371020863698456
+p-0_macro: 0.4746905534534777
+r-0_macro: 0.4378170638757168
+0.43371020863698456 0.4297118788754011
+[CTSAN_t3] epoch 83
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 14:24:27)
+training loss: 18.623729271814227
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9661322334304474
+p_macro: 0.9656988626105402
+r_macro: 0.9669160030691172
+f-1_macro: 0.9661322334304474
+p-1_macro: 0.9656988626105402
+r-1_macro: 0.9669160030691172
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.46418562011262043
+p_macro: 0.49253180128836305
+r_macro: 0.46786015576135265
+f-1_macro: 0.5008085440454925
+p-1_macro: 0.5262035026039604
+r-1_macro: 0.5037142683750614
+f-0_macro: 0.42678661145538954
+p-0_macro: 0.4623594350758818
+r-0_macro: 0.4299777481085892
+[CTSAN_t3] epoch 84
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 14:25:15)
+training loss: 17.94253931194544
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9635298245387113
+p_macro: 0.9644501143508325
+r_macro: 0.9645038381838335
+f-1_macro: 0.9635298245387113
+p-1_macro: 0.9644501143508325
+r-1_macro: 0.9645038381838335
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.45885560015324084
+p_macro: 0.4817360128023139
+r_macro: 0.46148938118405164
+f-1_macro: 0.5016434284061777
+p-1_macro: 0.5187082827626192
+r-1_macro: 0.5034096245585874
+f-0_macro: 0.4149858411036605
+p-0_macro: 0.45008279787137123
+r-0_macro: 0.41739780754927386
+[CTSAN_t3] epoch 85
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 14:26:02)
+training loss: 18.493056936189532
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9642509552851287
+p_macro: 0.9630558702680965
+r_macro: 0.9655859069555498
+f-1_macro: 0.9642509552851287
+p-1_macro: 0.9630558702680965
+r-1_macro: 0.9655859069555498
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.47313269679182507
+p_macro: 0.49377884647880227
+r_macro: 0.4750135176097059
+f-1_macro: 0.5263109410819781
+p-1_macro: 0.5407050895452558
+r-1_macro: 0.526468505205444
+f-0_macro: 0.4162804285812114
+p-0_macro: 0.4482167587566732
+r-0_macro: 0.4201534101663009
+[CTSAN_t3] epoch 86
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 14:26:50)
+training loss: 17.87947514327243
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9664358024478696
+p_macro: 0.9661779878076979
+r_macro: 0.9672410934732948
+f-1_macro: 0.9664358024478696
+p-1_macro: 0.9661779878076979
+r-1_macro: 0.9672410934732948
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.4623178319552738
+p_macro: 0.4915168235313117
+r_macro: 0.4659766965981604
+f-1_macro: 0.513051010169686
+p-1_macro: 0.5303984210234209
+r-1_macro: 0.514628701844957
+f-0_macro: 0.40891015869726416
+p-0_macro: 0.45475879370599853
+r-0_macro: 0.4152393229286559
+[CTSAN_t3] epoch 87
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 14:27:38)
+training loss: 19.426571076735854
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9645157269289143
+p_macro: 0.9653831790239131
+r_macro: 0.9647677717341984
+f-1_macro: 0.9645157269289143
+p-1_macro: 0.9653831790239131
+r-1_macro: 0.9647677717341984
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.4476607247190884
+p_macro: 0.4832167940408598
+r_macro: 0.4550843775191706
+f-1_macro: 0.49686226174100095
+p-1_macro: 0.5266955743286336
+r-1_macro: 0.5020260815522727
+f-0_macro: 0.39652481938992884
+p-0_macro: 0.43947029056113246
+r-0_macro: 0.40583787323071885
+[CTSAN_t3] epoch 88
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 14:28:26)
+training loss: 16.236060820519924
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9676262314847301
+p_macro: 0.968091559691736
+r_macro: 0.967418993498902
+f-1_macro: 0.9676262314847301
+p-1_macro: 0.968091559691736
+r-1_macro: 0.967418993498902
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.4705105473047682
+p_macro: 0.5006189399975068
+r_macro: 0.4757660832019457
+f-1_macro: 0.5079075443345821
+p-1_macro: 0.5306217023549147
+r-1_macro: 0.5118611074571645
+f-0_macro: 0.4310100927278439
+p-0_macro: 0.4714833863474805
+r-0_macro: 0.437101831816624
+0.4310100927278439 0.43371020863698456
+[CTSAN_t3] epoch 89
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 14:29:13)
+training loss: 15.740721656009555
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9663723493366652
+p_macro: 0.9660358463456697
+r_macro: 0.9667690190577568
+f-1_macro: 0.9663723493366652
+p-1_macro: 0.9660358463456697
+r-1_macro: 0.9667690190577568
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.45694747020048226
+p_macro: 0.48694486236255613
+r_macro: 0.460608991679766
+f-1_macro: 0.4897525555162178
+p-1_macro: 0.5078616352201258
+r-1_macro: 0.4918984063074106
+f-0_macro: 0.4224995775457325
+p-0_macro: 0.471323935684319
+r-0_macro: 0.4272283862519119
+[CTSAN_t3] epoch 90
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 14:30:00)
+training loss: 19.4876955691725
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9643230566226088
+p_macro: 0.9646962262274901
+r_macro: 0.9642338138132677
+f-1_macro: 0.9643230566226088
+p-1_macro: 0.9646962262274901
+r-1_macro: 0.9642338138132677
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.45844130408237277
+p_macro: 0.4951142005815061
+r_macro: 0.4631870521412032
+f-1_macro: 0.5105321697624734
+p-1_macro: 0.5352618003396657
+r-1_macro: 0.5141206285296329
+f-0_macro: 0.4043650030965042
+p-0_macro: 0.4580429089181341
+r-0_macro: 0.40977768570098566
+[CTSAN_t3] epoch 91
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 14:30:48)
+training loss: 20.43719308450818
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9635625364533968
+p_macro: 0.9645831130302015
+r_macro: 0.963357957667891
+f-1_macro: 0.9635625364533968
+p-1_macro: 0.9645831130302015
+r-1_macro: 0.963357957667891
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.4575481085775219
+p_macro: 0.5049008674142444
+r_macro: 0.465338621189888
+f-1_macro: 0.4930622009569378
+p-1_macro: 0.5373162675474815
+r-1_macro: 0.4991160944586472
+f-0_macro: 0.4196263646330454
+p-0_macro: 0.4724248938262307
+r-0_macro: 0.42855030206303163
+[CTSAN_t3] epoch 92
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 14:31:35)
+training loss: 17.576615882106125
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.966184252111312
+p_macro: 0.9652445370407302
+r_macro: 0.967208792485343
+f-1_macro: 0.966184252111312
+p-1_macro: 0.9652445370407302
+r-1_macro: 0.967208792485343
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.4641665484460072
+p_macro: 0.49885745702786455
+r_macro: 0.46793131209908956
+f-1_macro: 0.5072991242571051
+p-1_macro: 0.5339251209616517
+r-1_macro: 0.510096807340429
+f-0_macro: 0.4188985080021405
+p-0_macro: 0.4633702084149154
+r-0_macro: 0.423418862442388
+[CTSAN_t3] epoch 93
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 14:32:22)
+training loss: 15.912365262396634
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9674082876351133
+p_macro: 0.9677573212756791
+r_macro: 0.9676082614928591
+f-1_macro: 0.9674082876351133
+p-1_macro: 0.9677573212756791
+r-1_macro: 0.9676082614928591
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.46372272017232935
+p_macro: 0.4974380380801146
+r_macro: 0.46847267562749867
+f-1_macro: 0.511098956998897
+p-1_macro: 0.5362332166616818
+r-1_macro: 0.5156077053152529
+f-0_macro: 0.41368975167772487
+p-0_macro: 0.4585793968181675
+r-0_macro: 0.4182212809927924
+[CTSAN_t3] epoch 94
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 14:33:10)
+training loss: 15.425692377611995
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9678660488221126
+p_macro: 0.9678768296508675
+r_macro: 0.967951567212153
+f-1_macro: 0.9678660488221126
+p-1_macro: 0.9678768296508675
+r-1_macro: 0.967951567212153
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.4575546129427948
+p_macro: 0.4978557504949967
+r_macro: 0.4622262783367595
+f-1_macro: 0.5000345547769948
+p-1_macro: 0.5347948419412283
+r-1_macro: 0.5043395857123703
+f-0_macro: 0.4128320809325878
+p-0_macro: 0.46114660700285376
+r-0_macro: 0.417085411455376
+[CTSAN_t3] epoch 95
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 14:34:01)
+training loss: 15.241367339156568
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9678532754015059
+p_macro: 0.9683073395154155
+r_macro: 0.9676995747702518
+f-1_macro: 0.9678532754015059
+p-1_macro: 0.9683073395154155
+r-1_macro: 0.9676995747702518
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.45463920690893184
+p_macro: 0.48984424332660437
+r_macro: 0.4606970977762495
+f-1_macro: 0.5034936626195335
+p-1_macro: 0.5257009204668941
+r-1_macro: 0.5080964146206155
+f-0_macro: 0.40278341404666235
+p-0_macro: 0.45380629893556695
+r-0_macro: 0.4108975952611144
+[CTSAN_t3] epoch 96
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 14:34:49)
+training loss: 15.225106521509588
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.967668081742684
+p_macro: 0.9677820974963519
+r_macro: 0.9676074545618297
+f-1_macro: 0.967668081742684
+p-1_macro: 0.9677820974963519
+r-1_macro: 0.9676074545618297
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.45560374374888196
+p_macro: 0.492674964557083
+r_macro: 0.46078461557472833
+f-1_macro: 0.4943622270979704
+p-1_macro: 0.5219121071253967
+r-1_macro: 0.4994645379727651
+f-0_macro: 0.41443238324411685
+p-0_macro: 0.46468305464134857
+r-0_macro: 0.4191567811999652
+[CTSAN_t3] epoch 97
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 14:35:36)
+training loss: 15.568429998122156
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9644521311729611
+p_macro: 0.9636477421046395
+r_macro: 0.9657846860725797
+f-1_macro: 0.9644521311729611
+p-1_macro: 0.9636477421046395
+r-1_macro: 0.9657846860725797
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.45862793062903623
+p_macro: 0.49014867658628963
+r_macro: 0.46003999662569517
+f-1_macro: 0.4909869874471644
+p-1_macro: 0.5142426995955315
+r-1_macro: 0.49234896968241165
+f-0_macro: 0.4256979471161113
+p-0_macro: 0.4688522585832631
+r-0_macro: 0.42624971226002484
+[CTSAN_t3] epoch 98
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 14:36:24)
+training loss: 21.113817416131496
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9567132703074406
+p_macro: 0.9556812560622667
+r_macro: 0.9577703073000876
+f-1_macro: 0.9567132703074406
+p-1_macro: 0.9556812560622667
+r-1_macro: 0.9577703073000876
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.4373594578010822
+p_macro: 0.4591445056111812
+r_macro: 0.4414759789546769
+f-1_macro: 0.4693025371514616
+p-1_macro: 0.47608416171361817
+r-1_macro: 0.4724822878915839
+f-0_macro: 0.4033121857567588
+p-0_macro: 0.45202906657802927
+r-0_macro: 0.4097089861833658
+[CTSAN_t3] epoch 99
+Process train_step took 0 minutes	(Ended at 2024/06/23 - 14:37:12)
+training loss: 25.23753647878766
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9580481005514998
+p_macro: 0.9614880792528765
+r_macro: 0.9557533759153457
+f-1_macro: 0.9580481005514998
+p-1_macro: 0.9614880792528765
+r-1_macro: 0.9557533759153457
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.44292683358203827
+p_macro: 0.5023028305417864
+r_macro: 0.45466011917476096
+f-1_macro: 0.48228285678604926
+p-1_macro: 0.5185593091733433
+r-1_macro: 0.49065639812384143
+f-0_macro: 0.40036984478145515
+p-0_macro: 0.493495303403693
+r-0_macro: 0.4170350761423916
+TRAINED for 100 epochs
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.11/dist-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaling on "TRAIN" data
+f_macro: 0.9580481005514998
+p_macro: 0.9614880792528765
+r_macro: 0.9557533759153457
+f-1_macro: 0.9580481005514998
+p-1_macro: 0.9614880792528765
+r-1_macro: 0.9557533759153457
+f-0_macro: 0.0
+p-0_macro: 0.0
+r-0_macro: 0.0
+Evaling on "DEV" data
+f_macro: 0.44292683358203827
+p_macro: 0.5023028305417864
+r_macro: 0.45466011917476096
+f-1_macro: 0.48228285678604926
+p-1_macro: 0.5185593091733433
+r-1_macro: 0.49065639812384143
+f-0_macro: 0.40036984478145515
+p-0_macro: 0.493495303403693
+r-0_macro: 0.4170350761423916
+Process CTSAN_t3 took 89 minutes	(Ended at 2024/06/23 - 14:37:32)
