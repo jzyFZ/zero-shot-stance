@@ -63,7 +63,7 @@ def predict_helper(pred_lst, pred_data):
 
 
 if __name__ == '__main__':
-    parser = get_parser(mode='eval')
+    parser = get_parser(job='eval')
     args = vars(parser.parse_args())
     torch_settings(seed=SEED)
     config = config_settings(args=args)
